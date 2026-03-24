@@ -421,6 +421,8 @@ function initPreviewFollower() {
 
 function initMaskTextScrollReveal() {
   document.querySelectorAll('[data-split="heading"]').forEach(heading => {
+    if (heading.closest('[data-hero]')) return;
+
     // Find the split type, the default is 'lines'
     const type = heading.dataset.splitReveal || 'lines'
     const typesToSplit =
@@ -456,6 +458,8 @@ function initMaskTextScrollReveal() {
   })
 
   document.querySelectorAll('[data-split="body"]').forEach(heading => {
+    if (heading.closest('[data-hero]')) return;
+
     const type = 'lines'
     const typesToSplit = ['lines']
 
@@ -623,9 +627,10 @@ function initVideoPlayback() {
     // Create video element (lazy — not in DOM by default)
     const video = document.createElement('video');
     video.muted = true;
+    video.classList.add('visual_video')
     video.loop = true;
     video.playsInline = true;
-    video.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.3s ease;';
+    video.style.cssText = 'position:absolute;inset:0;object-fit:cover;opacity:0;transition:opacity 0.3s ease;';
     //wrapper.style.position = 'relative';
     wrapper.appendChild(video);
 
@@ -633,6 +638,14 @@ function initVideoPlayback() {
       if (!video.src) {
         video.src = src;
         console.log(`[VideoPlayback] Wrapper ${i}: src set`);
+      }
+    };
+
+    const fadeIn = () => {
+      if (video.readyState >= 3) {
+        video.style.opacity = '1';
+      } else {
+        video.addEventListener('canplay', () => { video.style.opacity = '1'; }, { once: true });
       }
     };
 
@@ -648,7 +661,7 @@ function initVideoPlayback() {
         loadVideo();
         wrapper.dataset.videoOnHover = 'active';
         video.play().then(() => {
-          video.style.opacity = '1';
+          fadeIn();
         }).catch(err => console.warn(`[VideoPlayback] Wrapper ${i}: play blocked:`, err));
       });
 
@@ -670,8 +683,8 @@ function initVideoPlayback() {
         trigger: wrapper,
         start: '0% 100%',
         end: '100% 0%',
-        onEnter: () => { loadVideo(); video.play(); video.style.opacity = '1'; },
-        onEnterBack: () => { video.play(); video.style.opacity = '1'; },
+        onEnter: () => { loadVideo(); video.play(); fadeIn(); },
+        onEnterBack: () => { video.play(); fadeIn(); },
         onLeave: () => { video.style.opacity = '0'; video.pause(); },
         onLeaveBack: () => { video.style.opacity = '0'; video.pause(); },
       });
@@ -1028,7 +1041,6 @@ function initCursor() {
   }
   initFollower()
 }
-
 
 const initProjectsLoadMore = () => {
   const ITEMS_PER_PAGE = 3;

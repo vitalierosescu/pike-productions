@@ -1,0 +1,1668 @@
+<div class="page-wrap is-home"><div data-load-wrap="" class="loader"><div class="w-embed"><!-- CSS Starter -->
+<style>
+:root {
+  --loader-width: 30vw;
+}
+</style></div><div class="loader__bg"><div data-load-progress="" class="loader__bg-bar"></div></div><div data-load-container="" class="loader__container"><div class="loader__logo-wrap" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"><div class="l-video-wrap" style="clip-path: polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 100% 0%); height: 100vh; width: 100vw;"><video playsinline="" loop="" data-video-src="https://osmo.b-cdn.net/resource-media/scaling-element-resource-185787-876545918_tiny.mp4" class="l-video" src="https://osmo.b-cdn.net/resource-media/scaling-element-resource-185787-876545918_tiny.mp4"></video></div><div class="l-logo-wrap" style="translate: none; rotate: none; scale: none; opacity: 0; transform: scale(30, 30);"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 619 743" fill="none" class="l-svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M392.203 235.879L391.766 338.129C391.694 352.08 406.123 360.831 417.685 353.898L506.391 300.594L618.196 370.179L228.894 603.366L147.508 552.869C135.977 545.713 121.366 554.39 121.366 568.415L121.295 670.017L0 742.578L1.0166 259.868L83.4902 224.235C96.7593 218.472 97.9589 199.332 85.5234 191.825L0.620117 140.722L1.41309 0L392.203 235.879ZM147.573 229.186C136.043 222.242 121.655 230.93 121.655 244.838L121.441 500.622C121.441 514.541 135.829 523.261 147.359 516.317L360.157 388.451C371.718 381.518 371.718 364.08 360.157 357.104L147.614 229.196L147.573 229.186Z" fill="currentColor"></path></svg></div></div></div></div><div class="page-transition_component" data-page-transition="" style="display: none;"><div class="page-transition_embed w-embed w-script"><style>
+  html:not(.page-transition-first-visit).w-mod-js .page-transition_component {
+    display: flex;
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script>
+  if (!sessionStorage.getItem("page-transition-first-visit")) {
+    sessionStorage.setItem("page-transition-first-visit", "viewed");
+    document.documentElement.classList.add("page-transition-first-visit");
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".page-transition_component").forEach((component) => {
+      if (component.hasAttribute("data-page-transition")) return;
+      component.setAttribute("data-page-transition", "");
+
+      document.addEventListener("click", (e) => {
+        const link = e.target.closest("a");
+        if (!link) return;
+        const currentUrl = link.href;
+        if (link.hostname !== window.location.host || currentUrl.includes("#") || link.target === "_blank") return;
+        e.preventDefault();
+        gsap.context(() => {
+          let tl = gsap.timeline({ onComplete: () => window.location.href = currentUrl });
+          tl.set(component, { display: "flex" });
+          tl.fromTo(".page-transition_column", { yPercent: 100 }, { yPercent: 0, duration: 0.3, ease: "power1.inOut", stagger: { each: 0.1, from: "start" } });
+        }, component);
+      });
+      window.onpageshow = e => e.persisted && window.location.reload();
+
+      if (document.documentElement.classList.contains("page-transition-first-visit")) return;
+      gsap.context(() => {
+        let tl = gsap.timeline();
+        tl.set(component, { display: "flex" });
+        tl.to(".page-transition_column", { yPercent: -100, duration: 0.3, ease: "power1.inOut", stagger: { each: 0.1, from: "start" } });
+        tl.set(component, {display: "none"});
+      }, component);
+
+    });
+  });
+</script></div><div class="page-transition_column" style="translate: none; rotate: none; scale: none; transform: translate(0%, -100%);"></div><div class="page-transition_column" style="translate: none; rotate: none; scale: none; transform: translate(0%, -100%);"></div><div class="page-transition_column" style="translate: none; rotate: none; scale: none; transform: translate(0%, -100%);"></div><div class="page-transition_column" style="translate: none; rotate: none; scale: none; transform: translate(0%, -100%);"></div><div class="page-transition_column" style="translate: none; rotate: none; scale: none; transform: translate(0%, -100%);"></div></div><div class="global-styles"><div class="u-embed-css w-embed"><style>
+
+  /* ------------------------- Default -------------------------------------------------- */
+  /*
+  body * {
+    color: inherit;
+  }
+  */
+
+  *,
+  *:after,
+  *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    text-size-adjust: none;
+  }
+
+  ::selection {
+    background-color: black;
+    color: white;
+    text-shadow: none;
+  }
+
+  *:focus-visible:not(input, textarea, select) {
+    outline: var(--color) auto 10px;
+    outline-offset: 5px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::after,
+    *::before {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+/*
+  svg {
+    max-width: none;
+    height: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
+  }
+*/
+
+  a,
+  .w-input,
+  .w-select,
+  .w-tab-link,
+  .w-nav-link,
+  .w-slider-arrow-left,
+  .w-slider-arrow-right,
+  .w-dropdown-btn,
+  .w-dropdown-toggle,
+  .w-dropdown-link {
+    color: inherit;
+    text-decoration: inherit;
+    font-size: inherit;
+  }
+
+  /* Focus state style for keyboard navigation for the focusable elements */
+  *[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+    outline: 0.125rem solid #4d65ff;
+    outline-offset: 0.125rem;
+  }
+
+  /* Get rid of top margin on first element in any rich text element */
+  .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+    margin-top: 0 !important;
+  }
+
+  /* Get rid of bottom margin on last element in any rich text element */
+  .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* Prevent all click and hover interaction with an element */
+  .pointer-events-off {
+    pointer-events: none;
+  }
+
+  /* Enables all click and hover interaction with an element */
+  .pointer-events-on {
+    pointer-events: auto;
+  }
+
+  /* Create a class of .div-square which maintains a 1:1 dimension of a div */
+  .div-square::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  /* Make sure containers never lose their center alignment */
+  .container-medium,.container-small, .container-large {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+
+  /* Apply "..." after 3 lines of text */
+  .text-style-3lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  /* Apply "..." after 2 lines of text */
+  .text-style-2lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  /* Adds inline flex display */
+  .display-inlineflex {
+    display: inline-flex;
+  }
+
+  /* These classes are never overwritten */
+  .hide {
+    display: none !important;
+  }
+
+  @media screen and (max-width: 991px) {
+    .hide, .hide-m {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .hide-s{
+      display: none !important;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    .hide-xs{
+      display: none !important;
+    }
+  }
+
+  @media screen and (min-width: 991px) {
+    .show-m-block, .show-m-flex{
+      display: none !important;
+    }
+  }
+  @media screen and (min-width: 767px) {
+    .show-s-block, .show-s-flex{
+      display: none !important;
+    }
+  }
+  @media screen and (min-width: 479px) {
+    .show-xs-block, .show-xs-flex{
+      display: none !important;
+    }
+  }
+
+  .margin-0 {
+    margin: 0rem !important;
+  }
+
+  .padding-0 {
+    padding: 0rem !important;
+  }
+
+  .spacing-clean {
+    padding: 0rem !important;
+    margin: 0rem !important;
+  }
+
+  .margin-top {
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-left: 0rem !important;
+  }
+
+  .padding-top {
+    padding-right: 0rem !important;
+    padding-bottom: 0rem !important;
+    padding-left: 0rem !important;
+  }
+
+  .margin-right {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-left: 0rem !important;
+  }
+
+  .padding-right {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+    padding-left: 0rem !important;
+  }
+
+  .margin-bottom {
+    margin-top: 0rem !important;
+    margin-right: 0rem !important;
+    margin-left: 0rem !important;
+  }
+
+  .padding-bottom {
+    padding-top: 0rem !important;
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+  }
+
+  .margin-left {
+    margin-top: 0rem !important;
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+
+  .padding-left {
+    padding-top: 0rem !important;
+    padding-right: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+
+  .margin-horizontal {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+
+  .padding-horizontal {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+
+  .margin-vertical {
+    margin-right: 0rem !important;
+    margin-left: 0rem !important;
+  }
+
+  .padding-vertical {
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+  }
+
+  .truncate-width { 
+    width: 100%; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none; 
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* To get this shitty padding-bottom/padding-right 75px bug removed */
+  .wf-design-mode .wf-empty,
+  .wf-editor-mode .wf-empty {
+    padding: 0 !important;
+  }
+  .wf-empty[class*="--"] {
+    padding: 0;
+  }
+
+
+  /* ------------------------- Hide Scrollbar -------------------------------------------------- */
+
+  body ::-webkit-scrollbar,
+  body::-webkit-scrollbar {display: none;} /* Chrome, Safari, Opera */
+  body {-ms-overflow-style: none;} /* IE & Edge */
+  html {scrollbar-width: none;} /* Firefox */
+
+  /* ------------------------- Reset CSS -------------------------------------------------- */
+
+
+  .seo-title {
+    position: absolute;
+    clip: rect(1px,1px,1px,1px);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+  }
+
+
+  /* Hide */
+  .u-hide-if-empty:empty,
+  .u-hide-if-empty:not(:has(> :not(.w-condition-invisible))),
+  .u-hide-if-empty-cms:not(:has(.w-dyn-item)),
+  .u-embed-js,
+  .u-embed-css {
+    display: none !important;
+  }
+
+  .wf-design-mode .webflow-info {
+    display: flex;
+  }
+
+  .rich-text-inherit > * {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    letter-spacing: inherit !important;
+    font-weight: inherit !important;
+    font-family: inherit !important;
+    margin: inherit !important;
+    padding: inherit !important;
+  }
+
+  .w-richtext:before, .w-richtext:after {
+    content: none;
+  }
+</style></div><div class="u-embed-css w-embed"><style>
+  :root {
+    --font-from: 18;
+    --font-to: 20;
+    --vw-from: calc(1920 / 100);
+    --vw-to: calc(2400 / 100);
+    --coefficient: calc((var(--font-to) - var(--font-from)) / (var(--vw-to) - var(--vw-from)));
+    --base: calc((var(--font-from) - var(--vw-from) * var(--coefficient)) / 16);
+  }
+
+  html {
+    font-size: calc(var(--base) * 1rem + var(--coefficient) * 1vw);
+  }
+
+  @media screen and (max-width: 1920px) {
+    :root {
+      --font-from: 16;
+      --font-to: 18;
+      --vw-from: calc(1440 / 100);
+      --vw-to: calc(1920 / 100);
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    :root {
+      --font-from: 14;
+      --font-to: 16;
+      --vw-from: calc(991 / 100);
+      --vw-to: calc(1440 / 100);
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    :root {
+      --font-from: 14;
+      --font-to: 16;
+      --vw-from: calc(767 / 100);
+      --vw-to: calc(991 / 100);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    :root {
+      --font-from: 14;
+      --font-to: 16;
+      --vw-from: calc(479 / 100);
+      --vw-to: calc(767 / 100);
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    :root {
+      --font-from: 12;
+      --font-to: 16;
+      --vw-from: calc(1 / 100);
+      --vw-to: calc(479 / 100);
+    }
+  }
+
+  /*
+  html {
+  font-size: 16px;
+  }
+
+  @media (min-width: 240px) and (max-width: 479px) {
+  html {
+  font-size: calc(8px + 8 * ((100vw - 240px) / 239));
+  }
+  }
+
+  @media (min-width: 480px) and (max-width: 767px) {
+  html {
+  font-size: calc(12px + 4 * ((100vw - 480px) / 287));
+  }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+  html {
+  font-size: calc(10.67px + 5.33 * ((100vw - 768px) / 223));
+  }
+  }
+
+  @media (min-width: 991px) and (max-width: 1439px) {
+  html {
+  font-size: min(calc(10.67px + 5.33 * ((100vw - 992px) / 447)), 14px);
+  }
+  }
+
+  @media (min-width: 1440px) {
+  html {
+  font-size: 16px;
+  }
+  }
+  */
+
+  .link_line.is-highlight {
+    transition: transform 0.735s cubic-bezier(0.625, 0.05, 0, 1);
+  }
+
+  .link_text-wrap, .link_icon-wrap,  .link_text, .link_icon {
+    transition: transform 0.35s cubic-bezier(0.625, 0.05, 0, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .link:hover .link_line.is-highlight {
+      transform: scaleX(1);
+    }
+
+    .link:hover .link_icon {
+      transform: translateX(100%);
+    }
+    .link:hover .link_icon-wrap {
+      transform: translateX(-.5rem);
+    }
+
+    .link:hover .link_text {
+      transform: translateY(-100%);
+    }
+
+    .link:hover .link_text-wrap {
+      transform: translateX(.5rem);
+    }
+
+    /* Show button on hover */
+
+    body:has([data-cursor]:hover) .cursor { 
+      opacity: 1; 
+    }
+
+    .button:hover .button-bg{
+      transform: scale(0.95);
+    }
+
+
+    /* FAQ */
+    .wf-design-mode .accordion_content_wrap {
+      display: block;
+    }
+
+    /* Underline Links - Contact page */
+    .link-underlined_wrap { --on: 1; --off: 0; }
+    .link-underlined_wrap:focus-visible { --on: 0; --off: 1; }
+    @media (hover: hover) {
+      .link-underlined_wrap:hover { --on: 0; --off: 1; }
+    }
+
+    /* Form Input Autofull - Reset */
+    input:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0px 9999px white;
+    }
+    input:-webkit-autofill:focus {
+      -webkit-box-shadow:0 0 0 50px white inset;
+    }
+</style></div><div class="u-embed-css w-embed"><style>
+  .wf-design-mode {
+    & .seo-title {
+      position: static;
+      clip: unset;
+      clip-path: inset(0%);
+      overflow: hidden;
+      height: auto;
+      width: auto;
+    }
+    & .seo-title::after {
+      content: " (this title is only for SEO, not visible on live site)";
+      display: block;
+      font-size: 11px;
+    }
+    & .link-cover {
+      z-index: -1;
+    }
+
+    & .home--projects_item-content {
+      pointer-events: auto;
+    }
+
+    .form_label {
+      z-index: 4;
+    }
+    .page-transition_component {
+      display: none !important;
+    }
+  }
+</style></div><div class="u-embed-css w-embed"><style>
+.btn {
+	--ease: cubic-bezier(.21, 1, .34, 1);
+  --color-ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --color-speed: 0.2s;
+  --speed: 0.45s;
+  --speed-fast: 0.3s;
+  --speed-faster: 0.15s;
+  --color: transparent;
+  --color-accent: white;
+  
+  transition: transform var(--speed-fast) var(--ease), color var(--color-speed) var(--color-ease);
+}
+
+/*
+.btn_bg {
+    clip-path: inset(0 round 3rem);
+    transition: clip-path var(--speed-fast) var(--ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover .btn_bg {
+    clip-path: inset(.25rem round 3rem);
+  }
+}
+*/
+
+
+.btn_bg {
+    transition: width var(--speed-fast) var(--ease), height var(--speed-fast) var(--ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover .btn_bg {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+  }
+}
+</style></div></div><div class="nav_wrap"><div class="u-embed-css w-embed"><!-- CSS Starter -->
+<style>
+  /* --------------------------------- Hamburger --------------------------------- */
+
+  .bold-nav-full__hamburger .bold-nav-full__hamburger-bar {
+    transform: translate(0, 0)  rotate(0.001deg);
+    transition: transform 0.5s cubic-bezier(.7, 0, .3, 1);
+  }
+
+  .bold-nav-full__hamburger .bold-nav-full__hamburger-bar:nth-child(1) {
+    transform: translate(0, -.45em) scale(1, 1) rotate(0.001deg);
+  }
+
+  .bold-nav-full__hamburger .bold-nav-full__hamburger-bar:nth-child(3) {
+    transform: translate(0, .45em) scale(1, 1) rotate(0.001deg);
+  }
+
+  /* Hamburger - Hover */
+  .bold-nav-full__hamburger:hover .bold-nav-full__hamburger-bar:nth-child(1) {
+    transform: translate(0, -.45em) scale(.5, 1) rotate(0.001deg);
+  }
+
+  .bold-nav-full__hamburger:hover .bold-nav-full__hamburger-bar:nth-child(3) {
+    transform: translate(0, .45em) scale(.5, 1) rotate(0.001deg);
+  }
+
+  /* Hamburger (Navigation Open) */
+
+  [data-navigation-status="active"]  .bold-nav-full__hamburger-bar:nth-child(1) {
+    transform: translate(0, 0) rotate(45deg) scale(1, 1);
+  }
+
+  [data-navigation-status="active"] .bold-nav-full__hamburger-bar:nth-child(2) {
+    transform: translate(-150%, 0) rotate(0.001deg) scale(1, 1);
+  }
+
+  [data-navigation-status="active"]  .bold-nav-full__hamburger-bar:nth-child(3) {
+    transform: translate(0, 0) rotate(-45deg) scale(1, 1);
+  }
+
+  /*  Hamburger - Hover (Navigation Open)  */
+
+  [data-navigation-status="active"] .bold-nav-full__hamburger:hover .bold-nav-full__hamburger-bar:nth-child(1) {
+    transform: translate(0, 0) rotate(45deg) scale(.7, 1);
+  }
+
+  [data-navigation-status="active"] .bold-nav-full__hamburger:hover .bold-nav-full__hamburger-bar:nth-child(3) {
+    transform: translate(0, 0) rotate(-45deg) scale(.7, 1);
+  }
+
+
+  /* --------------------------------- Tile --------------------------------- */
+
+  .bold-nav-full__tile {
+    transition: clip-path 1s cubic-bezier(.9, 0, .1, 1);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  }
+
+  /* Tile (Navigation Open) */
+
+  [data-navigation-status="active"] .bold-nav-full__tile {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  /* Tile - Links */
+
+  .bold-nav-full__link {
+    transform: translateY(100%) rotate(5deg);
+    transition: transform 0.4s cubic-bezier(.7, 0, .3, 1);
+  }
+
+  .bold-nav-full__li:nth-child(1) .bold-nav-full__link {transition-delay: 0.2s;}
+  .bold-nav-full__li:nth-child(2) .bold-nav-full__link {transition-delay: 0.15s;}
+  .bold-nav-full__li:nth-child(3) .bold-nav-full__link {transition-delay: 0.1s;}
+  .bold-nav-full__li:nth-child(4) .bold-nav-full__link {transition-delay: 0.05s;}
+  .bold-nav-full__li:nth-child(5) .bold-nav-full__link {transition-delay: 0s;}
+
+  /* Tile - Links (Navigation Open) */
+
+  [data-navigation-status="active"] .bold-nav-full__link {
+    transform: translateY(0%) rotate(0.001deg);
+    transition-delay: 0.3s;
+  }
+
+  [data-navigation-status="active"] .bold-nav-full__li:nth-child(1) .bold-nav-full__link {transition-delay: 0.3s;}
+  [data-navigation-status="active"] .bold-nav-full__li:nth-child(2) .bold-nav-full__link {transition-delay: 0.35s;}
+  [data-navigation-status="active"] .bold-nav-full__li:nth-child(3) .bold-nav-full__link {transition-delay: 0.4s;}
+  [data-navigation-status="active"] .bold-nav-full__li:nth-child(4) .bold-nav-full__link {transition-delay: 0.45s;}
+  [data-navigation-status="active"] .bold-nav-full__li:nth-child(5) .bold-nav-full__link {transition-delay: 0.5s;}
+
+
+  /* Tile - Links (Hover) */
+
+  .bold-nav-full__li {
+    transition: opacity 0.5s cubic-bezier(.7, 0, .3, 1);
+  }
+
+  .bold-nav-full__ul:has(.bold-nav-full__li:hover) .bold-nav-full__li {
+    opacity: 0.15;
+  }
+
+  .bold-nav-full__ul:has(.bold-nav-full__li:hover) .bold-nav-full__li:hover {
+    opacity: 1;
+  }
+
+  /* Tile - Links (Hover) */
+
+  .bold-nav-full__link .bold-nav-full__link-text {
+    transition: transform 0.3s cubic-bezier(.7, 0, .3, 1);
+    transform: translateY(0%) rotate(0.001deg);
+  }
+
+  .bold-nav-full__link:hover .bold-nav-full__link-text {
+    transform: translateY(-100%) rotate(0.001deg);
+  }
+</style></div><div class="bunny-player-css u-embed-css w-embed"><!-- CSS Starter -->
+<style>
+  /* Animation */
+  [data-bunny-player-init] :is(.bunny-player__placeholder, .bunny-player__dark, .bunny-player__playpause, .bunny-player__loading) {
+    transition: opacity 0.3s linear, visibility 0.3s linear;
+  }
+
+  .bunny-player__playpause {
+    pointer-events: auto;
+  }
+
+  /* Placeholder */
+  [data-bunny-player-init][data-player-status="playing"] .bunny-player__placeholder,
+  [data-bunny-player-init][data-player-status="paused"] .bunny-player__placeholder,
+  [data-bunny-player-init][data-player-activated="true"][data-player-status="ready"] .bunny-player__placeholder {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /* Dark Overlay */
+  [data-bunny-player-init][data-player-status="paused"] .bunny-player__dark,
+  [data-bunny-player-init][data-player-status="playing"][data-player-hover="active"] .bunny-player__dark{
+    opacity: 0.3;
+  }
+
+  [data-bunny-player-init][data-player-status="playing"] .bunny-player__dark {
+    opacity: 0;
+  }
+
+  /* Play/Pause */
+  [data-bunny-player-init][data-player-status="playing"] .bunny-player__playpause,
+  [data-bunny-player-init][data-player-status="loading"] .bunny-player__playpause {
+    opacity: 0;
+  }
+
+  [data-bunny-player-init][data-player-status="playing"][data-player-hover="active"] .bunny-player__playpause {
+    opacity: 1;
+  }
+
+  [data-bunny-player-init][data-player-status="playing"] .bunny-player__play-svg,
+  [data-bunny-player-init][data-player-status="loading"] .bunny-player__play-svg {
+    display: none;
+  }
+
+  [data-bunny-player-init][data-player-status="playing"] .bunny-player__pause-svg,
+  [data-bunny-player-init][data-player-status="loading"] .bunny-player__pause-svg{
+    display: block;
+  }
+
+  /* Loading */
+  [data-bunny-player-init][data-player-status="loading"] .bunny-player__loading {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Interface */
+  .bunny-player__interface {
+    transition: all 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+  }
+
+  [data-bunny-player-init][data-player-status="playing"] .bunny-player__interface,
+  [data-bunny-player-init][data-player-status="loading"] .bunny-player__interface{
+    opacity: 0;
+    transform: translateY(1em) rotate(0.001deg);
+  }
+
+  [data-bunny-player-init][data-player-status="playing"][data-player-hover="active"] .bunny-player__interface,
+  [data-bunny-player-init][data-player-status="loading"][data-player-hover="active"] .bunny-player__interface {
+    opacity: 1;
+    transform: translateY(0em) rotate(0.001deg);
+  }
+
+  /* Timeline */
+  [data-bunny-player-init][data-player-status="idle"][data-player-activated="false"] .bunny-player__timeline,
+  [data-bunny-player-init][data-player-status="ready"][data-player-activated="false"] .bunny-player__timeline {
+    pointer-events: none;
+  }
+
+  /* Timeline Handle */
+  [data-bunny-player-init] .bunny-player__timeline-handle {
+    transition: transform 0.15s ease-in-out;
+  }
+
+  [data-bunny-player-init][data-timeline-drag="true"] .bunny-player__timeline-handle {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* Fullscreen */
+  [data-bunny-player-init][data-player-fullscreen="true"] .bunny-player__fullscreen-shrink-svg {
+    display: block;
+  }
+
+  [data-bunny-player-init][data-player-fullscreen="true"] .bunny-player__fullscreen-scale-svg {
+    display: none;
+  }
+
+  /* Mute */
+  [data-bunny-player-init][data-player-muted="true"] .bunny-player__volume-mute-svg {
+    display: block;
+  }
+
+  [data-bunny-player-init][data-player-muted="true"] .bunny-player__volume-up-svg {
+    display: none;
+  }
+
+  /* Cover Mode */
+  [data-bunny-player-init][data-player-update-size="cover"] {
+    height: 100%;
+  }
+
+  [data-bunny-player-init][data-player-update-size="cover"] [data-player-before] {
+    display: none;
+  }
+
+  [data-bunny-player-init][data-player-update-size="cover"][data-player-fullscreen="false"] .bunny-player__video {
+    object-fit: cover;
+  }
+
+  .bunny-player__big-btn_initial {
+    opacity: 0;
+    transform: scaleY(1rem);
+    transition: all ease-in-out .3s;
+  }
+
+  .wf-design-mode {
+    .bunny-player__big-btn_initial {
+      opacity: 1;
+    }
+  }
+
+  .bunny-player__big-btn_initial {
+    opacity: 0;
+    transform: scaleY(1rem);
+    transition: all ease-in-out .3s;
+  }
+
+  [data-player-status="ready"] .bunny-player__big-btn_initial{
+    opacity: 1;
+    transform: scaleY(0rem);
+  }
+
+  @media screen and (min-width: 480px) {
+    [data-player-status="ready"] .bunny-player__big-btn, [data-player-status="idle"] .bunny-player__big-btn{
+      opacity: 0;
+    }
+  }
+
+  .wf-design-mode {
+ .bunny-player_placeholder-btn {
+	pointer-events: auto;
+   z-index: 3;
+  }
+}
+</style></div><div class="bunny-player-css u-embed-css w-embed"><!-- CSS Starter -->
+<style>
+[data-mini-showreel-status="active"] .mini-showreel__click {
+  display: none;
+}
+
+[data-mini-showreel-status] .mini-showreel__card {
+  transition: margin 1s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+[data-mini-showreel-status] .mini-showreel-lightbox__dark {
+  transition: all 1s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+[data-mini-showreel-status="active"] .mini-showreel-lightbox__dark {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bold-nav-full__end, .bold-nav-full__logo {
+  transition: opacity .8s ease-in-out;
+}
+
+.nav_wrap:has([data-mini-showreel-status="active"]) .bold-nav-full__end,
+.nav_wrap:has([data-mini-showreel-status="active"]) .bold-nav-full__logo {
+  opacity: .1;
+  pointer-events: none !important;
+}
+
+.mini-showreel__close {
+	transition: opacity .3s ease-in-out;
+}
+
+.nav_wrap:has([data-mini-showreel-status="active"]) .mini-showreel__close {
+  opacity: 1;
+  pointer-events: auto !important;
+}
+
+/* Mini Showreel Player: Extra CSS */
+
+[data-mini-showreel-status="not-active"] [data-bunny-player-init][data-player-status] .bunny-player__placeholder {
+  opacity: 1;
+  visibility: visible;
+}
+
+[data-mini-showreel-status="not-active"] [data-bunny-player-init][data-player-status] .bunny-player__dark {
+  opacity: 0;
+}
+
+[data-mini-showreel-status="not-active"] [data-bunny-player-init] .bunny-player__playpause {
+  opacity: 0;
+}
+
+[data-mini-showreel-status="not-active"] [data-bunny-player-init] .bunny-player__interface {
+  opacity: 0;
+  transform: translateY(1em) rotate(0.001deg);
+}
+</style></div><div class="nav_overlay"></div><nav data-navigation-status="not-active" class="bold-nav-full"><div class="bold-nav-full__bar"><a aria-label="Homepage" href="/" aria-current="page" class="bold-nav-full__logo w-inline-block w--current"><div class="div-hide"><div class="nav_logo_svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 155 25" fill="none"><path d="M151.407 18.4602C150.209 18.4602 149.293 18.1533 148.686 17.5493C148.228 17.1077 147.96 16.5489 147.886 15.8875H148.986C149.085 16.4327 149.4 16.8544 149.923 17.1437L149.942 17.1539C150.18 17.2624 150.432 17.346 150.701 17.4072C150.945 17.452 151.175 17.4734 151.408 17.4734C152.255 17.4734 153.678 17.2652 153.678 15.8704C153.678 14.4756 151.8 14.3248 151.183 14.2684C149.203 14.0837 148.241 13.3264 148.241 11.9554C148.241 11.3081 148.454 10.7678 148.876 10.35C149.392 9.81987 150.182 9.55148 151.221 9.55148C152.261 9.55148 153.098 9.82967 153.657 10.4021C154.069 10.8112 154.302 11.3154 154.37 11.938H153.271C153.158 11.2756 152.7 10.5393 151.221 10.5393C149.573 10.5393 149.327 11.4274 149.327 11.9565C149.327 12.7823 149.984 13.2589 151.28 13.3726C152.551 13.4986 153.425 13.7443 153.953 14.1211C154.499 14.5092 154.764 15.0817 154.764 15.8728C154.764 16.5702 154.527 17.1364 154.04 17.6046C153.465 18.176 152.581 18.464 151.408 18.464L151.407 18.4602H151.407Z" fill="currentColor"></path><path d="M32.6952 6.1268C33.9081 6.1268 34.8918 6.49352 35.6645 7.24445C36.4196 7.99538 36.8059 8.93982 36.8059 10.0925C36.8059 11.2451 36.4196 12.207 35.6645 12.958C34.8918 13.7089 33.907 14.0756 32.6952 14.0756H29.9543V18.3573H28.1968V6.1261H32.6952V6.1268ZM32.6952 12.4184C33.3799 12.4184 33.9432 12.1913 34.3824 11.7546C34.8215 11.3179 35.0498 10.7766 35.0498 10.0942C35.0498 9.41187 34.8215 8.88769 34.3824 8.45133C33.9432 8.01463 33.3813 7.78753 32.6952 7.78753H29.9543V12.4184H32.6952Z" fill="currentColor"></path><path d="M40.7603 7.35047L39.354 8.74911L37.948 7.35047L39.354 5.95183L40.7603 7.35047ZM38.4761 9.62251H40.2336V18.3604H38.4761V9.62251Z" fill="currentColor"></path><path d="M41.9024 6.22652L43.6599 5.95218V18.359H41.9024V6.22652ZM49.6333 9.62251L46.1183 13.9916L49.6333 18.3608H47.6122L44.0973 13.9916L47.6122 9.62251H49.6333Z" fill="currentColor"></path><path d="M51.4956 14.7772C51.6539 15.3885 51.9875 15.8949 52.479 16.263C52.9885 16.6472 53.569 16.8393 54.2541 16.8393C55.2903 16.8393 56.0816 16.4376 56.6263 15.6503H58.5769C58.2434 16.5237 57.6991 17.2235 56.9426 17.7474C56.1696 18.2712 55.2727 18.5333 54.2544 18.5333C52.9185 18.5333 51.8119 18.0966 50.934 17.2396C50.0734 16.3837 49.6333 15.2997 49.6333 13.9895C49.6333 12.6794 50.0724 11.5954 50.934 10.7398C51.8119 9.8839 52.9199 9.44615 54.2544 9.44615C55.589 9.44615 56.6966 9.88285 57.5573 10.7398C58.4355 11.5957 58.8756 12.6798 58.8756 13.9895C58.8756 14.1991 58.858 14.4612 58.8056 14.7755H51.496V14.7769L51.4956 14.7772ZM57.0126 13.2043C56.8546 12.593 56.5211 12.0867 56.0292 11.7185C55.5201 11.3343 54.9406 11.1422 54.2541 11.1422C53.5676 11.1422 52.9885 11.3343 52.479 11.7185C51.9875 12.0853 51.6536 12.592 51.4956 13.2043H57.0126Z" fill="currentColor"></path><path d="M64.64 18.3503V6.3049H68.9638C70.1394 6.3049 71.0686 6.65167 71.8036 7.36657C72.5302 8.08881 72.8838 8.97481 72.8838 10.075C72.8838 11.1751 72.5302 12.0797 71.8012 12.8047C71.0686 13.5172 70.1404 13.8639 68.9649 13.8639H65.7033V18.3503H64.6396H64.64ZM65.7033 12.8985H68.9649C69.7805 12.8985 70.4677 12.6266 71.0084 12.0888C71.5478 11.5523 71.8226 10.8749 71.8226 10.0753C71.8226 9.27574 71.5492 8.61684 71.0084 8.08041C70.4691 7.54398 69.7815 7.27069 68.9649 7.27069H65.7033V12.8985Z" fill="currentColor"></path><path d="M74.0414 18.3503V9.85942H75.1212V11.2518C75.5163 10.4259 76.9188 9.80203 78.1042 9.69215V10.7612C76.1521 10.8885 75.1212 11.9789 75.1212 13.9199V18.3513H74.0414V18.3503Z" fill="currentColor"></path><path d="M82.8148 18.535C81.5126 18.535 80.4264 18.112 79.5872 17.2774C78.7354 16.4463 78.304 15.3798 78.304 14.1047C78.304 12.8296 78.7344 11.763 79.5848 10.9347C80.4264 10.0977 81.5129 9.67465 82.8148 9.67465C84.1166 9.67465 85.2031 10.0977 86.0426 10.9323C86.8944 11.763 87.3258 12.8299 87.3258 14.1047C87.3258 15.3794 86.8944 16.4463 86.0451 17.2746C85.2035 18.1116 84.1169 18.5361 82.8148 18.5361V18.5347V18.535ZM82.8148 10.6915C81.8289 10.6915 81.001 11.0173 80.356 11.6584C79.7111 12.2998 79.3839 13.1231 79.3839 14.1036C79.3839 15.0841 79.7114 15.9075 80.356 16.5489C81.002 17.1903 81.8289 17.5157 82.8148 17.5157C83.8006 17.5157 84.6285 17.1903 85.2735 16.5489C85.9195 15.9064 86.2456 15.0841 86.2456 14.1036C86.2456 13.1231 85.9181 12.2998 85.2735 11.6584C84.6285 11.017 83.8006 10.6915 82.8148 10.6915Z" fill="currentColor"></path><path d="M92.7394 18.535C91.5262 18.535 90.5051 18.1134 89.7036 17.2827C88.8856 16.4355 88.4704 15.3651 88.4704 14.104C88.4704 12.8428 88.8856 11.7724 89.7036 10.9253C90.5051 10.0946 91.5262 9.67255 92.7394 9.67255C93.9525 9.67255 94.9908 10.0928 95.8099 10.9589L96.4887 11.6748V6.47111L97.5688 6.24156V18.3478H96.4887V16.53L95.8099 17.2459C94.9908 18.1116 93.986 18.5322 92.7394 18.5322V18.5347V18.535ZM93.0187 10.6555C91.9938 10.6555 91.1771 10.9725 90.5224 11.6223C89.8676 12.2735 89.5502 13.0857 89.5502 14.105C89.5502 15.1243 89.869 15.9365 90.5224 16.5877C91.1771 17.2389 91.9938 17.5546 93.0187 17.5546C94.0437 17.5546 94.8603 17.2375 95.5151 16.5877C96.1699 15.9365 96.4873 15.1243 96.4873 14.105C96.4873 13.0857 96.1685 12.2735 95.5151 11.6223C94.8603 10.9711 94.0437 10.6555 93.0187 10.6555Z" fill="currentColor"></path><path d="M102.662 18.535C101.567 18.535 100.709 18.1869 100.04 17.4723C99.3805 16.7648 99.0456 15.8504 99.0456 14.7527V9.85835H100.126V14.568C100.126 15.4624 100.403 16.1923 100.949 16.735C101.496 17.2788 102.228 17.5535 103.128 17.5535C104.027 17.5535 104.761 17.2778 105.307 16.735C105.853 16.1912 106.13 15.4624 106.13 14.568V9.85835H107.21V18.3492H106.13V16.5317L105.351 17.3775C104.553 18.2281 103.524 18.535 102.661 18.535H102.663H102.662Z" fill="currentColor"></path><path d="M113.203 18.535C111.9 18.535 110.814 18.112 109.975 17.2774C109.123 16.4463 108.692 15.3798 108.692 14.1047C108.692 12.8296 109.122 11.763 109.973 10.9347C110.814 10.0977 111.901 9.67465 113.203 9.67465C114.39 9.67465 115.374 10.0204 116.211 10.7314C116.911 11.3389 117.354 12.0737 117.562 12.9744H116.452C116.256 12.3418 115.9 11.8291 115.368 11.4089C114.758 10.9274 114.05 10.694 113.204 10.694C112.218 10.694 111.391 11.0198 110.746 11.6608C110.1 12.3022 109.773 13.1256 109.773 14.1061C109.773 15.0866 110.101 15.9099 110.746 16.5513C111.391 17.1927 112.218 17.5182 113.204 17.5182C114.051 17.5182 114.758 17.2848 115.368 16.8033C115.902 16.3827 116.256 15.87 116.453 15.2374H117.563C117.355 16.1381 116.911 16.8743 116.21 17.4832C115.376 18.1918 114.392 18.5361 113.205 18.5361L113.203 18.5347L113.203 18.535Z" fill="currentColor"></path><path d="M120.478 18.3503V10.8399H118.427V9.85941H120.478V7.71999L121.558 7.39806V9.85941H123.795V10.8399H121.558V18.3503H120.478Z" fill="currentColor"></path><path d="M125.057 18.3503V9.85941H126.137V18.3503H125.057ZM124.66 7.05863L125.597 6.12679L126.534 7.05863L125.597 7.99047L124.66 7.05863Z" fill="currentColor"></path><path d="M132.433 18.535C131.13 18.535 130.044 18.112 129.205 17.2774C128.353 16.4463 127.922 15.3798 127.922 14.1047C127.922 12.8296 128.352 11.763 129.203 10.9347C130.044 10.0977 131.131 9.67465 132.433 9.67465C133.734 9.67465 134.821 10.0977 135.66 10.9323C136.512 11.763 136.944 12.8299 136.944 14.1047C136.944 15.3794 136.512 16.4463 135.663 17.2746C134.821 18.1116 133.735 18.5361 132.433 18.5361V18.5347V18.535ZM132.433 10.6915C131.447 10.6915 130.619 11.0173 129.974 11.6584C129.329 12.2998 129.002 13.1231 129.002 14.1036C129.002 15.0841 129.329 15.9075 129.974 16.5489C130.62 17.1903 131.447 17.5157 132.433 17.5157C133.418 17.5157 134.246 17.1903 134.891 16.5489C135.537 15.9064 135.863 15.0841 135.863 14.1036C135.863 13.1231 135.536 12.2998 134.891 11.6584C134.246 11.017 133.418 10.6915 132.433 10.6915Z" fill="currentColor"></path><path d="M145.417 18.3503V13.6407C145.417 12.7463 145.14 12.0163 144.594 11.4736C144.047 10.9298 143.315 10.6551 142.415 10.6551C141.516 10.6551 140.782 10.9309 140.236 11.4736C139.689 12.0174 139.413 12.7463 139.413 13.6407V18.3503H138.333V9.85941H139.413L139.42 11.6521L140.113 10.8273C140.801 10.0102 141.729 9.67325 142.882 9.67325C144.035 9.67325 144.835 10.0214 145.504 10.7349C146.163 11.4421 146.498 12.3568 146.498 13.4545V18.3485H145.418L145.417 18.3499L145.417 18.3503Z" fill="currentColor"></path><path d="M21.3928 12.1825L17.5228 9.89196L14.4533 11.6461C14.0532 11.8743 13.5539 11.5863 13.5564 11.1272L13.5715 7.76233L0.0489065 0L0.0214623 4.63087L2.9594 6.3126C3.38972 6.55964 3.3482 7.18951 2.88903 7.37916L0.0351849 8.55175L0 24.4368L4.19721 22.049L4.19967 18.7054C4.19967 18.2439 4.70528 17.9584 5.10428 18.1939L7.92048 19.8556L21.3917 12.1818H21.3931L21.3928 12.1825ZM5.1078 7.54258L12.4625 11.7518C12.8626 11.9813 12.8626 12.5552 12.4625 12.7834L5.099 16.9912C4.7 17.2197 4.20214 16.9327 4.20214 16.4747L4.20952 8.05731C4.20952 7.59961 4.70739 7.31373 5.10639 7.54223H5.1078V7.54258Z" fill="currentColor"></path></svg></div></div></a><link rel="prefetch" href="/"><div class="bold-nav-full__end"><div data-wf--button--variant="outline" class="button_wrap"><a href="/contact" class="btn w-variant-b2031905-7ffb-05c3-ce5b-e0a3f3f1f37c w-inline-block text-style-nowrap"><span class="btn_text-wrap"><div class="btn_text">Let's talk</div></span><span class="btn_bg w-variant-b2031905-7ffb-05c3-ce5b-e0a3f3f1f37c"></span></a></div><button data-navigation-toggle="toggle" aria-label="Toggle Menu" class="bold-nav-full__hamburger"><div class="bold-nav-full__hamburger-bar"></div><div class="bold-nav-full__hamburger-bar"></div><div class="bold-nav-full__hamburger-bar"></div></button><div class="text-style-nowrap"></div></div></div><div class="bold-nav-full__tile"><div data-mini-showreel-status="not-active" data-mini-showreel-lightbox="showreel-2" class="mini-showreel-lightbox"><div data-cursor="Video sluiten" data-mini-showreel-close="" class="mini-showreel-lightbox__dark"></div><div data-mini-showreel-safearea="" class="mini-showreel-lightbox__safearea"><div data-mini-showreel-target="" class="mini-showreel-lightbox__target"><div class="mini-showreel__before"></div></div></div></div><div class="nav-bg"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adbbed9d077b240008ffe4_Menu%20desktop.jpg" loading="lazy" sizes="(max-width: 1440px) 100vw, 1440px" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adbbed9d077b240008ffe4_Menu%20desktop-p-500.jpg 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adbbed9d077b240008ffe4_Menu%20desktop-p-800.jpg 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adbbed9d077b240008ffe4_Menu%20desktop-p-1080.jpg 1080w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adbbed9d077b240008ffe4_Menu%20desktop.jpg 1440w" alt="" class="nav-bg_img img-cover"></div><div class="bold-nav-full__center"><ul class="bold-nav-full__ul"><li class="bold-nav-full__li"><a href="/" aria-current="page" class="bold-nav-full__link w-inline-block w--current"><div class="bold-nav-full__link-text_wrap"><span class="bold-nav-full__link-text">Home</span><span class="bold-nav-full__link-text is--abs">Home</span></div></a></li><li class="bold-nav-full__li"><a href="/cases" class="bold-nav-full__link w-inline-block"><div class="bold-nav-full__link-text_wrap"><span class="bold-nav-full__link-text">Cases</span><span class="bold-nav-full__link-text is--abs">Cases</span></div></a></li><li class="bold-nav-full__li"><a href="/diensten" class="bold-nav-full__link w-inline-block"><div class="bold-nav-full__link-text_wrap"><span class="bold-nav-full__link-text">Diensten</span><span class="bold-nav-full__link-text is--abs">Diensten</span></div></a></li><li class="bold-nav-full__li"><a href="/over-ons" class="bold-nav-full__link w-inline-block"><div class="bold-nav-full__link-text_wrap"><span class="bold-nav-full__link-text">Over ons</span><span class="bold-nav-full__link-text is--abs">Over ons</span></div></a></li><li class="bold-nav-full__li"><a href="/contact" class="bold-nav-full__link w-inline-block"><div class="bold-nav-full__link-text_wrap"><span class="bold-nav-full__link-text">Contact</span><span class="bold-nav-full__link-text is--abs">Contact</span></div></a></li></ul><div class="bold-nav-full__video"><div data-mini-showreel-status="not-active" data-mini-showreel-player="showreel-2" class="mini-showreel"><div class="mini-showreel__card"><div class="mini-showreel__media"><div data-player-muted="false" class="bunny-player" data-player-fullscreen="false" data-player-activated="false" data-player-autoplay="false" data-bunny-player-init="" data-player-hover="idle" data-player-src="https://vz-31d80f2d-a2e.b-cdn.net/0ae3226a-10af-4cec-850f-32b8100876e3/playlist.m3u8" data-player-status="ready" data-player-update-size="false" data-player-lazy="meta"><div data-player-before="" class="bunny-player__before"></div><video preload="none" width="1920" height="1080" playsinline="" class="bunny-player__video"></video><div class="bunny-player__placeholder"><img sizes="(max-width: 1538px) 100vw, 1538px" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69a6b1f356baac15cccc234d_d--employer-branding-p-500.avif 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69a6b1f356baac15cccc234d_d--employer-branding-p-800.avif 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69a6b1f356baac15cccc234d_d--employer-branding.avif 1538w" alt="" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69a6b1f356baac15cccc234d_d--employer-branding.avif" loading="eager" class="img-cover"><video preload="metadata" width="1920" height="1080" playsinline="true" src="https://pike-productions.b-cdn.net/Cases/Avamoplast/Avamoplast%20LOOP.mp4" autoplay="true" loop="" class="bunny-player__placeholder-video"></video><div class="bunny-player_placeholder-btn is-centered"><div class="bunny-player__big-btn_initial-svg"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="bunny-player__play-svg"><path d="M6 12V5.01109C6 4.05131 7.03685 3.4496 7.87017 3.92579L14 7.42855L20.1007 10.9147C20.9405 11.3945 20.9405 12.6054 20.1007 13.0853L14 16.5714L7.87017 20.0742C7.03685 20.5503 6 19.9486 6 18.9889V12Z" fill="currentColor"></path></svg></div><div class="hide-s">Showreel afspelen</div></div></div><div class="bunny-player__dark"></div><div data-player-control="playpause" class="bunny-player__playpause"><div class="bunny-player__big-btn_wrap"><div class="bunny-player__big-btn"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="bunny-player__pause-svg"><path d="M16 5V19" stroke="currentColor" stroke-width="3" stroke-miterlimit="10"></path><path d="M8 5V19" stroke="currentColor" stroke-width="3" stroke-miterlimit="10"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="bunny-player__play-svg"><path d="M6 12V5.01109C6 4.05131 7.03685 3.4496 7.87017 3.92579L14 7.42855L20.1007 10.9147C20.9405 11.3945 20.9405 12.6054 20.1007 13.0853L14 16.5714L7.87017 20.0742C7.03685 20.5503 6 19.9486 6 18.9889V12Z" fill="currentColor"></path></svg></div></div></div><div class="bunny-player__interface"><div class="bunny-player__interface-fade"></div><div class="bunny-player__interface-bottom"><div data-player-control="playpause" class="bunny-player__toggle-playpause"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="bunny-player__pause-svg"><path d="M16 5V19" stroke="currentColor" stroke-width="3" stroke-miterlimit="10"></path><path d="M8 5V19" stroke="currentColor" stroke-width="3" stroke-miterlimit="10"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="bunny-player__play-svg"><path d="M6 12V5.01109C6 4.05131 7.03685 3.4496 7.87017 3.92579L14 7.42855L20.1007 10.9147C20.9405 11.3945 20.9405 12.6054 20.1007 13.0853L14 16.5714L7.87017 20.0742C7.03685 20.5503 6 19.9486 6 18.9889V12Z" fill="currentColor"></path></svg></div><div class="bunny-player__time"><p data-player-time-progress="" class="bunny-player__text">00:00</p><p class="bunny-player__text is--transparent">/</p><p data-player-time-duration="" class="bunny-player__text is--transparent">00:54</p></div><div data-player-timeline="" class="bunny-player__timeline"><div class="bunny-player__timeline-bar"><div class="bunny-player__timeline-bg"></div><div data-player-buffered="" class="bunny-player__timeline-buffered"></div><div data-player-progress="" class="bunny-player__timeline-progress"></div></div><div data-player-timeline-handle="" class="bunny-player__timeline-handle"></div></div><div class="bunny-player__interface-btns"><div data-player-control="mute" class="bunny-player__toggle-mute"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="bunny-player__volume-up-svg"><path d="M3 8.99998V15H7L12 20V3.99998L7 8.99998H3ZM16.5 12C16.5 10.23 15.48 8.70998 14 7.96998V16.02C15.48 15.29 16.5 13.77 16.5 12ZM14 3.22998V5.28998C16.89 6.14998 19 8.82998 19 12C19 15.17 16.89 17.85 14 18.71V20.77C18.01 19.86 21 16.28 21 12C21 7.71998 18.01 4.13998 14 3.22998Z" fill="currentColor"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="bunny-player__volume-mute-svg"><path d="M16.5 12C16.5 10.23 15.48 8.71 14 7.97V10.18L16.45 12.63C16.48 12.43 16.5 12.22 16.5 12ZM19 12C19 12.94 18.8 13.82 18.46 14.64L19.97 16.15C20.63 14.91 21 13.5 21 12C21 7.72 18.01 4.14 14 3.23V5.29C16.89 6.15 19 8.83 19 12ZM4.27 3L3 4.27L7.73 9H3V15H7L12 20V13.27L16.25 17.52C15.58 18.04 14.83 18.45 14 18.7V20.76C15.38 20.45 16.63 19.81 17.69 18.95L19.73 21L21 19.73L12 10.73L4.27 3ZM12 4L9.91 6.09L12 8.18V4Z" fill="currentColor"></path></svg></div><div data-player-control="fullscreen" class="bunny-player__toggle-fullscreen"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="bunny-player__fullscreen-scale-svg"><rect x="3" y="14" width="2" height="7" fill="currentColor"></rect><rect x="3" y="3" width="2" height="7" fill="currentColor"></rect><rect x="19" y="3" width="2" height="7" fill="currentColor"></rect><rect x="19" y="14" width="2" height="7" fill="currentColor"></rect><rect x="3" y="19" width="7" height="2" fill="currentColor"></rect><rect x="14" y="19" width="7" height="2" fill="currentColor"></rect><rect x="3" y="3" width="7" height="2" fill="currentColor"></rect><rect x="14" y="3" width="7" height="2" fill="currentColor"></rect></svg><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="bunny-player__fullscreen-shrink-svg"><rect x="7" y="2" width="2" height="7" fill="currentColor"></rect><rect x="15" y="2" width="2" height="7" fill="currentColor"></rect><rect x="15" y="15" width="2" height="7" fill="currentColor"></rect><rect x="8" y="15" width="2" height="7" fill="currentColor"></rect><rect x="2" y="7" width="7" height="2" fill="currentColor"></rect><rect x="3" y="15" width="7" height="2" fill="currentColor"></rect><rect x="15" y="7" width="7" height="2" fill="currentColor"></rect><rect x="15" y="15" width="7" height="2" fill="currentColor"></rect></svg></div></div></div></div><div class="bunny-player__loading"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="L9" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve" width="100%" class="bunny-player__loading-svg vimeo-player__loading-svg" fill="none"><path fill="currentColor" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform></path></svg></div><div data-mini-showreel-close="" class="mini-showreel__close"><div class="icon-embed-small w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_131_1153)">
+<path d="M25 7L7 25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M25 25L7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</g>
+<defs>
+<clipPath id="clip0_131_1153">
+<rect width="32" height="32" fill="currentColor"></rect>
+</clipPath>
+</defs>
+</svg></div></div></div><div class="u-embed-js w-embed w-script"><!-- -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.6.11"></script>
+<script>
+function initBunnyPlayer(container) {
+  if (!container) {
+    container = document.querySelector('body');
+  }
+
+  container.querySelectorAll('[data-bunny-player-init]').forEach(function (player) {
+    var src = player.getAttribute('data-player-src');
+    if (!src) return;
+
+    var video = player.querySelector('video');
+    if (!video) return;
+
+    // Attribute helpers
+    function setStatus(s) {
+      if (player.getAttribute('data-player-status') !== s) {
+        player.setAttribute('data-player-status', s);
+      }
+    }
+
+    function setMutedState(v) {
+      video.muted = !!v;
+      player.setAttribute('data-player-muted', video.muted ? 'true' : 'false');
+    }
+
+    function setFsAttr(v) {
+      player.setAttribute('data-player-fullscreen', v ? 'true' :
+        'false');
+    }
+
+    function setActivated(v) {
+      player.setAttribute('data-player-activated', v ? 'true' :
+        'false');
+    }
+    if (!player.hasAttribute('data-player-activated')) setActivated(false);
+
+    // Elements
+    var timeline = player.querySelector('[data-player-timeline]');
+    var progressBar = player.querySelector('[data-player-progress]');
+    var bufferedBar = player.querySelector('[data-player-buffered]');
+    var handle = player.querySelector('[data-player-timeline-handle]');
+    var timeDurationEls = player.querySelectorAll('[data-player-time-duration]');
+    var timeProgressEls = player.querySelectorAll('[data-player-time-progress]');
+
+    // Flags
+    var updateSize = player.getAttribute('data-player-update-size'); // "true" | "cover" | null
+    var lazyMode = player.getAttribute('data-player-lazy'); // "true" | "meta" | null
+    var isLazyTrue = lazyMode === 'true';
+    var isLazyMeta = lazyMode === 'meta';
+    var autoplay = player.getAttribute('data-player-autoplay') === 'true';
+    var initialMuted = player.getAttribute('data-player-muted') === 'true';
+
+    // Used to suppress 'ready' flicker when user just pressed play in lazy modes
+    var pendingPlay = false;
+
+    // Autoplay forces muted and eager attach
+    if (autoplay) {
+      setMutedState(true);
+      isLazyTrue = false;
+      isLazyMeta = false;
+    } else { setMutedState(initialMuted); }
+
+    // Time formatting
+    function pad2(n) { return (n < 10 ? '0' : '') + n; }
+
+    function formatTime(sec) {
+      if (!isFinite(sec) || sec < 0) return '00:00';
+      var s = Math.floor(sec);
+      var h = Math.floor(s / 3600);
+      var m = Math.floor((s % 3600) / 60);
+      var r = s % 60;
+      if (h > 0) return h + ':' + pad2(m) + ':' + pad2(r);
+      return pad2(m) + ':' + pad2(r);
+    }
+
+    function setText(nodes, text) { nodes.forEach(function (n) { n.textContent = text; }); }
+
+    // Aspect ratio padding on [data-player-before]
+    function setBeforeRatio(w, h) {
+      if (updateSize !== 'true' || !w || !h) return;
+      var before = player.querySelector('[data-player-before]');
+      if (!before) return;
+      before.style.paddingTop = (h / w * 100) + '%';
+    }
+
+    //  Lazy meta fetch (duration + aspect) without attaching playback
+    function fetchMetaOnce() {
+      // For hls.js: load manifest into a temporary instance and destroy after we got info
+      if (window.Hls && Hls.isSupported()) {
+        try {
+          var tmp = new Hls();
+          var gotRatio = false,
+            gotDuration = false,
+            dur = 0;
+
+          tmp.on(Hls.Events.MANIFEST_PARSED, function (e, data) {
+            var lvls = (data && data.levels) || tmp.levels || [];
+            if (lvls.length) {
+              var best = lvls.reduce(function (a, b) {
+                return (b.width || 0) > (a.width ||
+                  0) ? b : a;
+              }, lvls[0]);
+              if (best.width && best.height) {
+                setBeforeRatio(best.width, best.height);
+                gotRatio = true;
+              }
+            }
+          });
+
+          tmp.on(Hls.Events.LEVEL_LOADED, function (e, data) {
+            if (data && data.details && isFinite(data.details.totalduration)) {
+              dur = data.details.totalduration;
+              gotDuration = true;
+              if (timeDurationEls.length) setText(timeDurationEls, formatTime(dur));
+            }
+          });
+
+          tmp.on(Hls.Events.ERROR, function () {
+            try { tmp.destroy(); } catch (_) {}
+          });
+
+          tmp.on(Hls.Events.LEVEL_LOADED, function () {
+            // If we have at least some meta and we're still pre-activation and idle, optionally show 'ready'
+            if (!pendingPlay &&
+              player.getAttribute('data-player-activated') !== 'true' &&
+              player.getAttribute('data-player-status') === 'idle' &&
+              (gotRatio || gotDuration)) {
+              setStatus('ready');
+            }
+            try { tmp.destroy(); } catch (_) {}
+          });
+
+          tmp.loadSource(src);
+        } catch (_) {}
+        return;
+      }
+
+      // Native HLS path (Safari): load metadata then detach to keep it "meta-only"
+      if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        var prevPreload = video.preload;
+        video.preload = 'metadata';
+        var onMeta = function () {
+          setBeforeRatio(video.videoWidth, video.videoHeight);
+          if (timeDurationEls.length) setText(timeDurationEls, formatTime(video.duration));
+          if (!pendingPlay &&
+            player.getAttribute('data-player-activated') !== 'true' &&
+            player.getAttribute('data-player-status') === 'idle') {
+            setStatus('ready');
+          }
+          // Detach to avoid further loading until user plays
+          if (!autoplay) {
+            try {
+              video.removeAttribute('src');
+              video.load();
+            } catch (_) {}
+          } else {
+            video.preload = prevPreload || '';
+          }
+          video.removeEventListener('loadedmetadata', onMeta);
+        };
+        video.addEventListener('loadedmetadata', onMeta, { once: true });
+        video.src = src;
+      }
+    }
+
+    // Minimal ratio fetch when requested (and not already handled by lazy meta)
+    if (updateSize === 'true' && !isLazyMeta) {
+      if (window.Hls && Hls.isSupported()) {
+        try {
+          var tmp2 = new Hls();
+          tmp2.on(Hls.Events.MANIFEST_PARSED, function (e, data) {
+            var lvls = (data && data.levels) || tmp2.levels || [];
+            if (lvls.length) {
+              var best = lvls.reduce(function (a, b) {
+                return (b.width || 0) > (a.width ||
+                  0) ? b : a;
+              }, lvls[0]);
+              setBeforeRatio(best.width || 0, best.height || 0);
+            }
+            try { tmp2.destroy(); } catch (_) {}
+          });
+          tmp2.on(Hls.Events.ERROR, function () { try { tmp2.destroy(); } catch (_) {} });
+          tmp2.loadSource(src);
+        } catch (_) {}
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        var prev = video.preload;
+        video.preload = 'metadata';
+        var onMeta2 = function () {
+          setBeforeRatio(video.videoWidth, video.videoHeight);
+          video.removeEventListener('loadedmetadata', onMeta2);
+          if (isLazyTrue) {
+            try {
+              video.removeAttribute('src');
+              video.load();
+            } catch (_) {}
+          }
+          else { video.preload = prev || ''; }
+        };
+        video.addEventListener('loadedmetadata', onMeta2, { once: true });
+        video.src = src;
+      }
+    }
+
+    // Attach media only once (for actual playback)
+    var isAttached = false;
+
+    function attachMediaOnce() {
+      if (isAttached) return;
+      isAttached = true;
+
+      if (player._hls) { try { player._hls.destroy(); } catch (_) {} player._hls = null; }
+
+      if (window.Hls && Hls.isSupported()) {
+        var hls = new Hls({ maxBufferLength: 10 });
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MEDIA_ATTACHED, function () { hls.loadSource(src); });
+        hls.on(Hls.Events.MANIFEST_PARSED, function () {
+          if (!pendingPlay &&
+            player.getAttribute('data-player-activated') !== 'true' &&
+            player.getAttribute('data-player-status') === 'idle') {
+            setStatus('ready');
+          }
+          if (updateSize === 'true') {
+            var lvls = hls.levels || [];
+            if (lvls.length) {
+              var best = lvls.reduce(function (a, b) {
+                return (b.width || 0) > (a.width ||
+                  0) ? b : a;
+              }, lvls[0]);
+              setBeforeRatio(best.width || 0, best.height || 0);
+            }
+          }
+          if (autoplay) attemptAutoplay();
+        });
+        player._hls = hls;
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        // Respect lazy modes
+        video.preload = isLazyTrue ? 'none' : (isLazyMeta ? 'metadata' : video.preload);
+        video.src = src;
+        video.addEventListener('loadedmetadata', function () {
+          if (!pendingPlay &&
+            player.getAttribute('data-player-activated') !== 'true' &&
+            player.getAttribute('data-player-status') === 'idle') {
+            setStatus('ready');
+          }
+          if (updateSize === 'true') setBeforeRatio(video.videoWidth, video.videoHeight);
+          if (autoplay) attemptAutoplay();
+        }, { once: true });
+      }
+    }
+
+    // Attempt autoplay
+    function attemptAutoplay() {
+      var p = video.play();
+      if (p && typeof p.then === 'function') p.catch(function () {});
+    }
+
+    // Initialize based on lazy mode
+    if (autoplay) {
+      attachMediaOnce();
+    } else if (isLazyMeta) {
+      // Only fetch meta (duration + ratio); do not attach for playback yet
+      fetchMetaOnce();
+      video.preload = 'none';
+    } else if (isLazyTrue) {
+      // Fully lazy: do nothing until user hits play
+      video.preload = 'none';
+    } else {
+      // Not lazy
+      attachMediaOnce();
+    }
+
+    // Toggle play/pause
+    function togglePlay() {
+      if (video.paused || video.ended) {
+        if ((isLazyTrue || isLazyMeta) && !isAttached) attachMediaOnce();
+        pendingPlay = true;
+        var p = video.play();
+        if (p && typeof p.then === 'function') p.catch(function () {});
+      } else {
+        video.pause();
+      }
+    }
+
+    // Toggle mute
+    function toggleMute() { setMutedState(!video.muted); }
+
+    // Fullscreen helpers
+    function isFsActive() {
+      return !!(document.fullscreenElement || document
+        .webkitFullscreenElement);
+    }
+
+    function enterFullscreen() {
+      if (player.requestFullscreen) return player.requestFullscreen();
+      if (video.requestFullscreen) return video.requestFullscreen();
+      if (video.webkitSupportsFullscreen && typeof video.webkitEnterFullscreen === 'function')
+        return video.webkitEnterFullscreen();
+    }
+
+    function exitFullscreen() {
+      if (document.exitFullscreen) return document.exitFullscreen();
+      if (document.webkitExitFullscreen) return document.webkitExitFullscreen();
+      if (video.webkitDisplayingFullscreen && typeof video.webkitExitFullscreen === 'function')
+        return video.webkitExitFullscreen();
+    }
+
+    function toggleFullscreen() {
+      if (isFsActive() || video.webkitDisplayingFullscreen) exitFullscreen();
+      else enterFullscreen();
+    }
+    document.addEventListener('fullscreenchange', function () { setFsAttr(isFsActive()); });
+    document.addEventListener('webkitfullscreenchange', function () {
+      setFsAttr(
+        isFsActive());
+    });
+    video.addEventListener('webkitbeginfullscreen', function () { setFsAttr(true); });
+    video.addEventListener('webkitendfullscreen', function () { setFsAttr(false); });
+
+    // Controls (delegated)
+    player.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-player-control]');
+      if (!btn || !player.contains(btn)) return;
+      var type = btn.getAttribute('data-player-control');
+      if (type === 'play' || type === 'pause' || type === 'playpause') togglePlay();
+      else if (type === 'mute') toggleMute();
+      else if (type === 'fullscreen') toggleFullscreen();
+    });
+
+    // Time text (not in rAF)
+    function updateTimeTexts() {
+      if (timeDurationEls.length) setText(timeDurationEls, formatTime(video.duration));
+      if (timeProgressEls.length) setText(timeProgressEls, formatTime(video.currentTime));
+    }
+    video.addEventListener('timeupdate', updateTimeTexts);
+    video.addEventListener('loadedmetadata', updateTimeTexts);
+    video.addEventListener('durationchange', updateTimeTexts);
+
+    // rAF visuals (progress + handle only)
+    var rafId;
+
+    function updateProgressVisuals() {
+      if (!video.duration) return;
+      var playedPct = (video.currentTime / video.duration) * 100;
+      if (progressBar) progressBar.style.transform = 'translateX(' + (-100 + playedPct) + '%)';
+      if (handle) handle.style.left = playedPct + '%';
+    }
+
+    function loop() {
+      updateProgressVisuals();
+      if (!video.paused && !video.ended) rafId = requestAnimationFrame(loop);
+    }
+
+    // Buffered bar (not in rAF)
+    function updateBufferedBar() {
+      if (!bufferedBar || !video.duration || !video.buffered.length) return;
+      var end = video.buffered.end(video.buffered.length - 1);
+      var buffPct = (end / video.duration) * 100;
+      bufferedBar.style.transform = 'translateX(' + (-100 + buffPct) + '%)';
+    }
+    video.addEventListener('progress', updateBufferedBar);
+    video.addEventListener('loadedmetadata', updateBufferedBar);
+    video.addEventListener('durationchange', updateBufferedBar);
+
+    // Media event wiring
+    video.addEventListener('play', function () {
+      setActivated(true);
+      cancelAnimationFrame(rafId);
+      loop();
+    });
+    video.addEventListener('playing', function () {
+      pendingPlay = false;
+      setStatus('playing');
+    });
+    video.addEventListener('pause', function () {
+      pendingPlay = false;
+      cancelAnimationFrame(rafId);
+      updateProgressVisuals();
+      setStatus('paused');
+    });
+    video.addEventListener('waiting', function () { setStatus('loading'); });
+    video.addEventListener('canplay', function () {
+      if (player.getAttribute('data-player-activated') !== 'true' &&
+        !pendingPlay &&
+        player.getAttribute('data-player-status') === 'idle') {
+        setStatus('ready');
+      }
+    });
+    video.addEventListener('ended', function () {
+      pendingPlay = false;
+      cancelAnimationFrame(rafId);
+      updateProgressVisuals();
+      setStatus('paused');
+      setActivated(false);
+    });
+
+    // Scrubbing (pointer events)
+    if (timeline) {
+      var dragging = false;
+      var wasPlaying = false;
+      var targetTime = 0;
+      var lastSeekTs = 0;
+      var seekThrottle = 180;
+      var rect = null;
+
+      window.addEventListener('resize', function () { if (!dragging) rect = null; });
+
+      function getFractionFromX(x) {
+        if (!rect) rect = timeline.getBoundingClientRect();
+        var f = (x - rect.left) / rect.width;
+        if (f < 0) f = 0;
+        if (f > 1) f = 1;
+        return f;
+      }
+
+      function previewAtFraction(f) {
+        if (!video.duration) return;
+        var pct = f * 100;
+        if (progressBar) progressBar.style.transform = 'translateX(' + (-100 + pct) + '%)';
+        if (handle) handle.style.left = pct + '%';
+        if (timeProgressEls.length) setText(timeProgressEls, formatTime(f * video.duration));
+      }
+
+      function maybeSeek(now) {
+        if (!video.duration) return;
+        if ((now - lastSeekTs) < seekThrottle) return;
+        lastSeekTs = now;
+        video.currentTime = targetTime;
+      }
+
+      function onPointerDown(e) {
+        if (!video.duration) return;
+        dragging = true;
+        wasPlaying = !video.paused && !video.ended;
+        if (wasPlaying) video.pause();
+        player.setAttribute('data-timeline-drag', 'true');
+        rect = timeline.getBoundingClientRect();
+
+        var f = getFractionFromX(e.clientX);
+        targetTime = f * video.duration;
+        previewAtFraction(f);
+        maybeSeek(performance.now());
+
+        timeline.setPointerCapture && timeline.setPointerCapture(e.pointerId);
+        window.addEventListener('pointermove', onPointerMove, { passive: false });
+        window.addEventListener('pointerup', onPointerUp, { passive: true });
+        e.preventDefault();
+      }
+
+      function onPointerMove(e) {
+        if (!dragging) return;
+        var f = getFractionFromX(e.clientX);
+        targetTime = f * video.duration;
+        previewAtFraction(f);
+        maybeSeek(performance.now());
+        e.preventDefault();
+      }
+
+      function onPointerUp() {
+        if (!dragging) return;
+        dragging = false;
+        player.setAttribute('data-timeline-drag', 'false');
+        rect = null;
+        video.currentTime = targetTime;
+        if (wasPlaying) {
+          var p = video.play();
+          if (p && typeof p.then === 'function') p.catch(function () {});
+        } else {
+          updateProgressVisuals();
+          updateTimeTexts();
+        }
+        window.removeEventListener('pointermove', onPointerMove);
+        window.removeEventListener('pointerup', onPointerUp);
+      }
+
+      timeline.addEventListener('pointerdown', onPointerDown, { passive: false });
+      if (handle) handle.addEventListener('pointerdown', onPointerDown, { passive: false });
+    }
+
+    // Hover/idle detection (pointer-based)
+    var hoverTimer;
+    var hoverHideDelay = 3000;
+
+    function setHover(state) {
+      if (player.getAttribute('data-player-hover') !== state) {
+        player.setAttribute('data-player-hover', state);
+      }
+    }
+
+    function scheduleHide() {
+      clearTimeout(hoverTimer);
+      hoverTimer = setTimeout(function () { setHover('idle'); }, hoverHideDelay);
+    }
+
+    function wakeControls() {
+      setHover('active');
+      scheduleHide();
+    }
+
+    player.addEventListener('pointerdown', wakeControls);
+    video.addEventListener('play', wakeControls);
+    video.addEventListener('pause', wakeControls);
+    document.addEventListener('fullscreenchange', wakeControls);
+    document.addEventListener('webkitfullscreenchange', wakeControls);
+
+    var trackingMove = false;
+
+    function onPointerMoveGlobal(e) {
+      var r = player.getBoundingClientRect();
+      if (e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r
+        .bottom) {
+        wakeControls();
+      }
+    }
+    player.addEventListener('pointerenter', function () {
+      wakeControls();
+      if (!trackingMove) {
+        trackingMove = true;
+        window.addEventListener('pointermove', onPointerMoveGlobal, { passive: true });
+      }
+    });
+    player.addEventListener('pointerleave', function () {
+      setHover('idle');
+      clearTimeout(hoverTimer);
+      if (trackingMove) {
+        trackingMove = false;
+        window.removeEventListener('pointermove', onPointerMoveGlobal);
+      }
+    });
+  });
+}
+
+initBunnyPlayer()
+
+</script></div></div><div data-mini-showreel-open="showreel-2" class="mini-showreel__click"></div></div></div></div></div><div class="bold-nav__bottom hide-s"><div class="u-embed-css w-embed"><!-- CSS Starter -->
+<style>
+
+
+  @media screen and (min-width: 768px) {
+    .nav-info_item:hover {
+      background: var(--_theme---background--bg-alt);
+      color: var(--_theme---text-color--text-alt);
+    }
+  }
+</style></div><a data-cursor="Mail mij" data-wf--nav-info-link--variant="socials" href="mailto:stef@pikeproductions.be" class="nav-info_item w-inline-block"><div class="nav-info_item-svg icon-embed-xxsmall w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.32559 0.434753L8.44809 0.990087M8.44809 0.990087L7.89276 7.11258M8.44809 0.990087L0.434692 7.67068" stroke="currentColor" stroke-width="0.869406" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div><div>stef@pikeproductions.be</div></a><a data-cursor="Even bellen?" data-wf--nav-info-link--variant="socials" href="tel:+32(0)475523648" class="nav-info_item w-inline-block"><div class="nav-info_item-svg icon-embed-xxsmall w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.32559 0.434753L8.44809 0.990087M8.44809 0.990087L7.89276 7.11258M8.44809 0.990087L0.434692 7.67068" stroke="currentColor" stroke-width="0.869406" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div><div>+32 (0) 475 52 36 48</div></a><a data-cursor="Check onze insta" data-wf--nav-info-link--variant="socials" href="https://www.instagram.com/pike.productions/?hl=en" target="_blank" class="nav-info_item w-inline-block"><div class="nav-info_item-svg icon-embed-xxsmall w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.32559 0.434753L8.44809 0.990087M8.44809 0.990087L7.89276 7.11258M8.44809 0.990087L0.434692 7.67068" stroke="currentColor" stroke-width="0.869406" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div><div>Instagram</div></a><a data-cursor="Of LinkedIn" data-wf--nav-info-link--variant="socials" href="https://www.linkedin.com/company/pike-productions-video-production-agency/" target="_blank" class="nav-info_item w-inline-block"><div class="nav-info_item-svg icon-embed-xxsmall w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.32559 0.434753L8.44809 0.990087M8.44809 0.990087L7.89276 7.11258M8.44809 0.990087L0.434692 7.67068" stroke="currentColor" stroke-width="0.869406" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div><div>LinkedIn</div></a></div><div class="bold-nav__bottom show-s-flex"><div class="nav-info_list"><div class="nav-info_list-title">Contact</div><a data-cursor="" data-wf--nav-info-link--variant="contact" href="mailto:stef@pikeproductions.be" class="nav-info_item w-inline-block"><div class="nav-info_item-svg icon-embed-xxsmall w-variant-3a7f16a1-8af6-da1a-acb2-e2375216b3cb w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.32559 0.434753L8.44809 0.990087M8.44809 0.990087L7.89276 7.11258M8.44809 0.990087L0.434692 7.67068" stroke="currentColor" stroke-width="0.869406" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div><div>stef@pikeproductions.be</div></a><a data-cursor="" data-wf--nav-info-link--variant="contact" href="tel:+32(0)475523648" class="nav-info_item w-inline-block"><div class="nav-info_item-svg icon-embed-xxsmall w-variant-3a7f16a1-8af6-da1a-acb2-e2375216b3cb w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.32559 0.434753L8.44809 0.990087M8.44809 0.990087L7.89276 7.11258M8.44809 0.990087L0.434692 7.67068" stroke="currentColor" stroke-width="0.869406" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div><div>+32 (0) 475 52 36 48</div></a></div><div class="nav-info_list"><div class="nav-info_list-title">Socials</div><a data-cursor="" data-wf--nav-info-link--variant="socials" href="https://www.instagram.com/pike.productions/?hl=en" target="_blank" class="nav-info_item w-inline-block"><div class="nav-info_item-svg icon-embed-xxsmall w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.32559 0.434753L8.44809 0.990087M8.44809 0.990087L7.89276 7.11258M8.44809 0.990087L0.434692 7.67068" stroke="currentColor" stroke-width="0.869406" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div><div>Instagram</div></a><a data-cursor="" data-wf--nav-info-link--variant="socials" href="https://www.linkedin.com/company/pike-productions-video-production-agency/" target="_blank" class="nav-info_item w-inline-block"><div class="nav-info_item-svg icon-embed-xxsmall w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.32559 0.434753L8.44809 0.990087M8.44809 0.990087L7.89276 7.11258M8.44809 0.990087L0.434692 7.67068" stroke="currentColor" stroke-width="0.869406" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div><div>LinkedIn</div></a></div><div class="show-xs-flex"></div></div></div></nav></div><div class="cursor" style="transform: translate(1517.47px, 189.73px) rotate(0.0013861deg);"><p data-cursor-text="" class="cursor-paragraph">Bekijk meer</p><div class="button-default__svg w-embed"><svg width="100%" height="100%" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.99984 5.98239L8.19085 4.85756L6.75603 5.71897C6.56903 5.831 6.33565 5.68958 6.3368 5.46414L6.34387 3.81178L0.0228608 0L0.0100323 2.27405L1.38334 3.09988C1.58449 3.22119 1.56508 3.53049 1.35045 3.62363L0.0164468 4.19944L0 12L1.96194 10.8274L1.96309 9.18554C1.96309 8.95889 2.19943 8.81867 2.38594 8.93432L3.70235 9.75035L9.99934 5.98204H10L9.99984 5.98239ZM2.38759 3.70387L5.82547 5.77086C6.01247 5.88358 6.01247 6.16539 5.82547 6.27743L2.38347 8.34373C2.19697 8.45593 1.96424 8.31503 1.96424 8.0901L1.9677 3.95664C1.9677 3.73188 2.20042 3.59149 2.38693 3.7037H2.38759V3.70387Z" fill="#191317"></path>
+</svg></div></div><main class="main-wrap"><div class="resource-wrapper"><section class="scaling-element-header_wrap"><section class="scaling-element-header"><div class="scaling-element__small-box"><div data-flip-element="wrapper" class="scaling-video__wrapper"></div></div><div class="home--hero_content"><div class="home--hero_content-inner"><p data-split="heading" aria-label="Pike Productions maakt videocontent die merken versterkt met heldere, professionele en strategisch doordachte beelden. We vertalen verhalen naar content die overtuigt, raakt en zichtbaar resultaat oplevert."><div class="line-mask" aria-hidden="true" style="position: relative; display: block; text-align: start; overflow: clip;"><div class="line" aria-hidden="true" style="position: relative; display: block; text-align: start; translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Pike Productions maakt videocontent die merken versterkt met heldere, </div></div><div class="line-mask" aria-hidden="true" style="position: relative; display: block; text-align: start; overflow: clip;"><div class="line" aria-hidden="true" style="position: relative; display: block; text-align: start; translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">professionele en strategisch doordachte beelden. We vertalen verhalen </div></div><div class="line-mask" aria-hidden="true" style="position: relative; display: block; text-align: start; overflow: clip;"><div class="line" aria-hidden="true" style="position: relative; display: block; text-align: start; translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">naar content die overtuigt, raakt en zichtbaar resultaat oplevert.</div></div></p><div data-wf--button-group--variant="base"><div data-wf--spacer--variant="medium-2rem" class="spacer w-variant-6fd0da79-0c0e-5c2c-c295-0c99c73355b4"></div><div class="button-group"><div data-wf--link--variant="base" class="link_wrap"><a href="/over-ons" class="link w-inline-block"><div class="link_inner"><div class="link_text-wrap"><div class="link_text">Meer over ons</div></div><div class="link_icon-wrap"><div class="link_icon w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.90214 3.71429L3.59229 0.404429L4 1.27146e-07L8 4L4 8L3.59229 7.59557L6.90214 4.28571L-6.28961e-07 4.28571L-5.79005e-07 3.71429L6.90214 3.71429Z" fill="currentColor"></path>
+</svg></div><div class="link_icon w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.90214 3.71429L3.59229 0.404429L4 1.27146e-07L8 4L4 8L3.59229 7.59557L6.90214 4.28571L-6.28961e-07 4.28571L-5.79005e-07 3.71429L6.90214 3.71429Z" fill="currentColor"></path>
+</svg></div></div></div><div class="link_line" style="translate: none; rotate: none; scale: none; transform-origin: 0% 50%; transform: translate(0px, 0px);"></div><div class="link_line is-highlight"></div></a></div></div></div></div></div></section><img class="hero_bg" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991d3c36c174bfba3f4c0df_loader-bg.avif" alt="" data-load-bg="" sizes="(max-width: 2160px) 100vw, 2160px" loading="eager" fetchpriority="high" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991d3c36c174bfba3f4c0df_loader-bg-p-500.avif 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991d3c36c174bfba3f4c0df_loader-bg.avif 2160w"></section><section class="scaling-element-video"><div class="scaling-element__big-box"><div class="scaling-video__before"></div><div data-flip-element="wrapper" class="scaling-video__wrapper"></div></div><div class="intro_text"><h2 data-highlight-text="" class="t-a-center" aria-label="Bij Pike Productions maken we videocontent die merken versterkt met heldere, professionele en strategisch doordachte beelden."><div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">B</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">j</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">P</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">k</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">P</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">d</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">u</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">c</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">n</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">s</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">m</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">a</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">k</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">n</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">w</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">v</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">d</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">c</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">n</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">n</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">t</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">d</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">m</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">k</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">n</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">v</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">s</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">k</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">t</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">m</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">t</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">h</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">l</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">d</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">,</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">p</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">f</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">s</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">s</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">n</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">l</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">n</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">s</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">a</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">g</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">i</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">s</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">c</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">h</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">d</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">o</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">r</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">d</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">a</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">c</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">h</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">t</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div></div> <div aria-hidden="true" style="position: relative; display: inline-block;"><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">b</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">l</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">d</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">e</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">n</div><div aria-hidden="true" style="position: relative; display: inline-block; opacity: 0.2; visibility: inherit;">.</div></div></h2></div><div data-wf--link--variant="base" class="link_wrap"><a href="/over-ons" class="link w-inline-block"><div class="link_inner"><div class="link_text-wrap"><div class="link_text">Meer over ons</div></div><div class="link_icon-wrap"><div class="link_icon w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.90214 3.71429L3.59229 0.404429L4 1.27146e-07L8 4L4 8L3.59229 7.59557L6.90214 4.28571L-6.28961e-07 4.28571L-5.79005e-07 3.71429L6.90214 3.71429Z" fill="currentColor"></path>
+</svg></div><div class="link_icon w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.90214 3.71429L3.59229 0.404429L4 1.27146e-07L8 4L4 8L3.59229 7.59557L6.90214 4.28571L-6.28961e-07 4.28571L-5.79005e-07 3.71429L6.90214 3.71429Z" fill="currentColor"></path>
+</svg></div></div></div><div class="link_line" style="translate: none; rotate: none; scale: none; transform-origin: 0% 50%; transform: scale(0, 1);"></div><div class="link_line is-highlight"></div></a></div><div class="scaling-el_video-bg"></div></section></div><section class="section_home--intro"><div class="padding-global u-rel-z-3"><div class="container-large"><div class="padding-section-large"><div class="home--intro_grid u-grid"><div data-parallax-scrub="1.2" data-parallax="trigger" data-parallax-start="10" data-parallax-end="-60" id="w-node-d8229d7a-b325-8f32-d64b-1c26dc85b6c5-6652c86b" class="home--intro_wrap-1 parallax-parent" style="translate: none; rotate: none; scale: none; transform: translate(0%, 10%);"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699dd6ffedd0ddd6f995b061_intro-1.webp" alt="" class="visual_img"></div></div><div data-parallax-end="-30" data-parallax="target" data-parallax-start="20" data-parallax-scrub="1.2" id="w-node-d8229d7a-b325-8f32-d64b-1c26dc85b6c7-6652c86b" class="home--intro_wrap-2 parallax-parent"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699dd6ffbabfbb792d7a014e_intro-2.webp" alt="" class="visual_img"></div></div></div></div></div></div><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb1c12ffcc22c9616b_home-shape-1.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb1c12ffcc22c9616b_home-shape-1-p-500.png 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb1c12ffcc22c9616b_home-shape-1-p-800.png 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb1c12ffcc22c9616b_home-shape-1-p-1080.png 1080w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb1c12ffcc22c9616b_home-shape-1-p-1600.png 1600w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb1c12ffcc22c9616b_home-shape-1.avif 2124w" alt="" class="home--intro_bg bg-img"></section><section class="section_home--services"><div class="u-embed-css w-embed"><!-- CSS Starter -->
+<style>
+  .preview-follower__inner,
+  .preview-follower__label{
+    transition: opacity 0.1s ease, transform 0.6s cubic-bezier(0.65, 0.1, 0, 1);
+  }
+
+  /* html:not(.wf-design-mode) */ .preview-follower__inner{
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  /* html:not(.wf-design-mode) */ .preview-follower__label{
+    opacity: 0;
+    transform: translate(0px, 100%);
+  }
+
+  .wf-design-mode .preview-follower__inner{
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .wf-design-mode .preview-follower__label{
+    opacity: 1;
+  }
+
+  .preview-follower [data-follower-visual]{
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  @media (hover: hover) and (min-width: 992px){
+    body:has( [data-follower-collection]:hover) .preview-follower__inner{
+      opacity: 1;
+      transform: scale(1);	
+    }
+
+    body:has( [data-follower-collection]:hover) .preview-follower__label{
+      opacity: 1;
+      transform: translate(0px, 0%);
+    }
+    body:has( .preview-item:hover) .preview-item:not(:hover){
+      opacity: 0.5;
+    }
+  }
+</style></div><div class="padding-global"><div class="container-large"><div class="padding-section-large"><div data-follower-wrap="" class="preview-container"><div class="preview-item__row"><div class="preview-item__col is--large"><span class="preview-container__label">Expertises</span></div></div><div data-follower-collection="" class="preview-collection"><div class="preview-list"><div data-follower-item="" class="preview-item"><a href="/diensten#corporate-video" class="preview-item__inner w-inline-block"><div class="preview-item__row u-grid"><div class="preview-item__col is--small"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69918897e7fe68129c76d293_service-icon-1.svg" loading="lazy" alt="" class="preview-item__number"></div><div class="preview-item__col is--large"><h3 class="preview-item__heading">Corporate video</h3></div><div class="preview-item__col is--medium"><p class="preview-item__text">Corporate video’s vertalen jouw merkverhaal naar krachtige beelden die vertrouwen wekken en intern én extern impact maken.</p></div></div><div data-follower-visual="" class="preview-item__visual"><div data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="preview-item__visual-img"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2.jpg" loading="lazy" alt="" sizes="(max-width: 774px) 100vw, 774px" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2-p-500.jpg 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2-p-800.jpg 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2.jpg 826w" class="visual_img"><video autoplay="true" loop="" muted="" playsinline="true" src="https://pike-productions.b-cdn.net/Expertises/1.%20Corporate%20LOOP.mp4" class="visual_video"></video></div></div></a><div class="show-s-block"><div data-wf--button-group--variant="base"><div data-wf--spacer--variant="xsmall-1rem" class="spacer w-variant-1c804c5e-1948-3884-7b37-6c8b801010b4"></div><div class="button-group"><a data-wf--link---underlined--variant="highlight" href="/diensten#corporate-video" class="link-underlined_wrap w-variant-9ab7ba6b-f0c4-c6ec-b500-8311175ebaa4 w-inline-block"><div class="link-underlined_text">Bekijk meer</div><div class="link-underlined_line"></div></a></div></div></div></div><div data-follower-item="" class="preview-item"><a href="/diensten#social-media-content" class="preview-item__inner w-inline-block"><div class="preview-item__row u-grid"><div class="preview-item__col is--small"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69918897951cee771a26a4d4_service-icon-2.svg" loading="lazy" alt="" class="preview-item__number"></div><div class="preview-item__col is--large"><h3 class="preview-item__heading">Social media content</h3></div><div class="preview-item__col is--medium"><p class="preview-item__text">Social media content die je doelgroep triggert met short-form, doelgerichte video's die aandacht trekken en resultaat opleveren.</p></div></div><div data-follower-visual="" class="preview-item__visual"><div data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="preview-item__visual-img"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2.jpg" loading="lazy" alt="" sizes="(max-width: 774px) 100vw, 774px" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2-p-500.jpg 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2-p-800.jpg 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2.jpg 826w" class="visual_img"><video autoplay="true" loop="" muted="" playsinline="true" src="https://pike-productions.b-cdn.net/Expertises/2.%20Social%20Media%20Content%20LOOP.mp4" class="visual_video"></video></div></div></a><div class="show-s-block"><div data-wf--button-group--variant="base"><div data-wf--spacer--variant="xsmall-1rem" class="spacer w-variant-1c804c5e-1948-3884-7b37-6c8b801010b4"></div><div class="button-group"><a data-wf--link---underlined--variant="highlight" href="/diensten#social-media-content" class="link-underlined_wrap w-variant-9ab7ba6b-f0c4-c6ec-b500-8311175ebaa4 w-inline-block"><div class="link-underlined_text">Bekijk meer</div><div class="link-underlined_line"></div></a></div></div></div></div><div data-follower-item="" class="preview-item"><a href="/diensten#commercials" class="preview-item__inner w-inline-block"><div class="preview-item__row u-grid"><div class="preview-item__col is--small"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991889724b9e56702b7a922_service-icon-3.svg" loading="lazy" alt="" class="preview-item__number"></div><div class="preview-item__col is--large"><h3 class="preview-item__heading">Commercial</h3></div><div class="preview-item__col is--medium"><p class="preview-item__text">Commerciële video’s die je merk scherp neerzetten en opvallen tussen de rest. Creatief, professioneel en gericht op zichtbaar resultaat.</p></div></div><div data-follower-visual="" class="preview-item__visual"><div data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="preview-item__visual-img"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2.jpg" loading="lazy" alt="" sizes="(max-width: 774px) 100vw, 774px" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2-p-500.jpg 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2-p-800.jpg 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2.jpg 826w" class="visual_img"><video autoplay="true" loop="" muted="" playsinline="true" src="https://pike-productions.b-cdn.net/Expertises/3.%20Commercial%20LOOP.mp4" class="visual_video"></video></div></div></a><div class="show-s-block"><div data-wf--button-group--variant="base"><div data-wf--spacer--variant="xsmall-1rem" class="spacer w-variant-1c804c5e-1948-3884-7b37-6c8b801010b4"></div><div class="button-group"><a data-wf--link---underlined--variant="highlight" href="/diensten#commercials" class="link-underlined_wrap w-variant-9ab7ba6b-f0c4-c6ec-b500-8311175ebaa4 w-inline-block"><div class="link-underlined_text">Bekijk meer</div><div class="link-underlined_line"></div></a></div></div></div></div><div data-follower-item="" class="preview-item"><a href="/diensten#event-aftermovies" class="preview-item__inner w-inline-block"><div class="preview-item__row u-grid"><div class="preview-item__col is--small"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69918897d27aba452b49f500_service-icon-4.svg" loading="lazy" alt="" class="preview-item__number"></div><div class="preview-item__col is--large"><h3 class="preview-item__heading">Event aftermovie</h3></div><div class="preview-item__col is--medium"><p class="preview-item__text">We leggen de energie en sfeer van jouw event vast in een professionele aftermovie die FOMO creëert bij de afwezigen en een mooie herinnering biedt aan de mensen die er wel bij waren.</p></div></div><div data-follower-visual="" class="preview-item__visual"><div data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="preview-item__visual-img"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2.jpg" loading="lazy" alt="" sizes="(max-width: 774px) 100vw, 774px" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2-p-500.jpg 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2-p-800.jpg 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2.jpg 826w" class="visual_img"><video autoplay="true" loop="" muted="" playsinline="true" src="https://pike-productions.b-cdn.net/Expertises/4.%20Event%20Aftermovie%20LOOP.mp4" class="visual_video"></video></div></div></a><div class="show-s-block"><div data-wf--button-group--variant="base"><div data-wf--spacer--variant="xsmall-1rem" class="spacer w-variant-1c804c5e-1948-3884-7b37-6c8b801010b4"></div><div class="button-group"><a data-wf--link---underlined--variant="highlight" href="/diensten#event-aftermovies" class="link-underlined_wrap w-variant-9ab7ba6b-f0c4-c6ec-b500-8311175ebaa4 w-inline-block"><div class="link-underlined_text">Bekijk meer</div><div class="link-underlined_line"></div></a></div></div></div></div><div data-follower-item="" class="preview-item"><a href="/diensten#empoyer-branding" class="preview-item__inner w-inline-block"><div class="preview-item__row u-grid"><div class="preview-item__col is--small"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699188976dc902dbeb4fe8dd_service-icon-5.svg" loading="lazy" alt="" class="preview-item__number"></div><div class="preview-item__col is--large"><h3 class="preview-item__heading">Employer branding</h3></div><div class="preview-item__col is--medium"><p class="preview-item__text">Employer branding video’s brengen de cultuur, waarden en menselijkheid van je onderneming tot leven.</p></div></div><div data-follower-visual="" class="preview-item__visual"><div data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="preview-item__visual-img"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2.jpg" loading="lazy" alt="" sizes="(max-width: 774px) 100vw, 774px" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2-p-500.jpg 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2-p-800.jpg 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2.jpg 826w" class="visual_img"><video autoplay="true" loop="" muted="" playsinline="true" src="https://pike-productions.b-cdn.net/Expertises/5.%20Recruitment%20Film%20LOOP.mp4" class="visual_video"></video></div></div></a><div class="show-s-block"><div data-wf--button-group--variant="base"><div data-wf--spacer--variant="xsmall-1rem" class="spacer w-variant-1c804c5e-1948-3884-7b37-6c8b801010b4"></div><div class="button-group"><a data-wf--link---underlined--variant="highlight" href="/diensten#empoyer-branding" class="link-underlined_wrap w-variant-9ab7ba6b-f0c4-c6ec-b500-8311175ebaa4 w-inline-block"><div class="link-underlined_text">Bekijk meer</div><div class="link-underlined_line"></div></a></div></div></div></div></div></div><div data-follower-cursor="" class="preview-follower" style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1517px, 189px);"><div data-follower-cursor-inner="" class="preview-follower__inner"><div class="preview-follower__label"><span class="preview-follower__label-span"><span>Meer info</span><div class="preview-follower__svg icon-embed-xsmall w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.99984 5.98239L8.19085 4.85756L6.75603 5.71897C6.56903 5.831 6.33565 5.68958 6.3368 5.46414L6.34387 3.81178L0.0228608 0L0.0100323 2.27405L1.38334 3.09988C1.58449 3.22119 1.56508 3.53049 1.35045 3.62363L0.0164468 4.19944L0 12L1.96194 10.8274L1.96309 9.18554C1.96309 8.95889 2.19943 8.81867 2.38594 8.93432L3.70235 9.75035L9.99934 5.98204H10L9.99984 5.98239ZM2.38759 3.70387L5.82547 5.77086C6.01247 5.88358 6.01247 6.16539 5.82547 6.27743L2.38347 8.34373C2.19697 8.45593 1.96424 8.31503 1.96424 8.0901L1.9677 3.95664C1.9677 3.73188 2.20042 3.59149 2.38693 3.7037H2.38759V3.70387Z" fill="currentColor"></path>
+</svg></div></span></div></div></div></div></div></div></div><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffa26add77dbfea7917_home-shape-expertise.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffa26add77dbfea7917_home-shape-expertise-p-500.png 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffa26add77dbfea7917_home-shape-expertise-p-800.png 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffa26add77dbfea7917_home-shape-expertise-p-1080.png 1080w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffa26add77dbfea7917_home-shape-expertise.avif 1748w" alt="" class="home--services_bg bg-img"></section><section class="section_home--projects"><div class="padding-global"><div class="container-large"><div class="padding-section-large"><div class="u-embed-css w-embed"><style>
+  @media screen and (min-width: 768px) {
+    .home--projects_item:nth-child(5n+1) {
+      margin-right: 8%;
+      grid-column-end: 8;
+      grid-column-start: 2;
+      grid-row-end: 2;
+      grid-row-start: 1;
+    }
+
+    .home--projects_item:nth-child(5n+2) {
+      margin-left: 8%;
+      grid-column-start: 7;
+      grid-column-end: 13;
+      grid-row-end: 3;
+      grid-row-start: 2;
+    }
+
+    .home--projects_item:nth-child(5n+3) {
+      margin-top: -7vh;
+      margin-right: 5%;
+      margin-left: 5%;
+      grid-column-start: 1;
+      grid-column-end: 7;
+      grid-row-end: 4;
+      grid-row-start: 3;
+    }
+
+    .home--projects_item:nth-child(5n+4) {
+      margin-top: -1vh;
+      margin-left: 10%;
+      grid-column-end: 12;
+      grid-column-start: 6;
+      grid-row-end: 5;
+      grid-row-start: 4;
+    }
+
+    .home--projects_item:nth-child(5n+5) {
+      margin-right: 5%;
+      margin-left: 5%;
+      grid-column-end: 9;
+      grid-column-start: 3;
+      grid-row-end: 6;
+      grid-row-start: 5;
+    }
+  }
+</style></div><div class="home--projects_component"><h2 class="home--projects_title">Projecten die het verschil maken</h2><div class="home--projects_list-wrap w-dyn-list"><div role="list" class="home--projects_list u-grid w-dyn-items"><div data-cursor="Bekijk case" data-parallax="trigger" data-parallax-start="0" data-parallax-end="-20" data-parallax-scrub="1.2" role="listitem" class="home--projects_item w-dyn-item" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"><div class="home--projects_item-link"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-on-hover="" data-video-src="https://pike-productions.b-cdn.net/Cases/Avamoplast/Avamoplast%20LOOP.mp4" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c8a2/69919e0e8bccea76df4dc460_Avamoplast%20Thumbnail.avif" alt="" class="visual_img"><video autoplay="true" loop="" muted="" playsinline="true" src="" class="visual_video is-on-hover"></video><video loop="" playsinline="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;"></video></div><div class="home--projects_item-content"><h3 class="home--projects_item-title">Avamoplast</h3><div class="hide-s w-dyn-list"><div role="list" class="tag-list w-dyn-items"><div role="listitem" class="tag-item w-dyn-item"><div>Corporate video</div></div><div role="listitem" class="tag-item w-dyn-item"><div>Bedrijfsfilm</div></div><div role="listitem" class="tag-item w-dyn-item"><div>Recruitment film</div></div><div role="listitem" class="tag-item w-dyn-item"><div>Employer branding</div></div></div></div></div><div class="home--projects_fade"></div><a href="#" class="link-cover w-inline-block"></a></div></div><div data-cursor="Bekijk case" data-parallax="trigger" data-parallax-start="10" data-parallax-end="-80" data-parallax-scrub="1.2" role="listitem" class="home--projects_item w-dyn-item" style="translate: none; rotate: none; scale: none; transform: translate(0%, 10%);"><div class="home--projects_item-link"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-on-hover="" data-video-src="https://pike-productions.b-cdn.net/Cases/Factry/Factry%20LOOP.mp4" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c8a2/69919ddad1748aa979141a68_Factry%20Thumbnail.avif" alt="" class="visual_img"><video autoplay="true" loop="" muted="" playsinline="true" src="" class="visual_video is-on-hover"></video><video loop="" playsinline="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;"></video></div><div class="home--projects_item-content"><h3 class="home--projects_item-title">Factry</h3><div class="hide-s w-dyn-list"><div role="list" class="tag-list w-dyn-items"><div role="listitem" class="tag-item w-dyn-item"><div>Bedrijfsevent aftermovie</div></div><div role="listitem" class="tag-item w-dyn-item"><div>Corporate video</div></div><div role="listitem" class="tag-item w-dyn-item"><div>Social media content</div></div><div role="listitem" class="tag-item w-dyn-item"><div>Testimonial</div></div></div></div></div><div class="home--projects_fade"></div><a href="#" class="link-cover w-inline-block"></a></div></div><div data-cursor="Bekijk case" data-parallax="trigger" data-parallax-start="40" data-parallax-end="-80" data-parallax-scrub="1.2" role="listitem" class="home--projects_item w-dyn-item" style="translate: none; rotate: none; scale: none; transform: translate(0%, 40%);"><div class="home--projects_item-link"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-on-hover="" data-video-src="https://pike-productions.b-cdn.net/Cases/Unilin%20Panels/Unilin%20Panels%20LOOP.mp4" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c8a2/69919dce1602b7aad2b134b4_Unilin%20Thumbnail.avif" alt="" class="visual_img"><video autoplay="true" loop="" muted="" playsinline="true" src="" class="visual_video is-on-hover"></video><video loop="" playsinline="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;"></video></div><div class="home--projects_item-content"><h3 class="home--projects_item-title">Unilin Panels</h3><div class="hide-s w-dyn-list"><div role="list" class="tag-list w-dyn-items"><div role="listitem" class="tag-item w-dyn-item"><div>Corporate video</div></div><div role="listitem" class="tag-item w-dyn-item"><div>Testimonial</div></div><div role="listitem" class="tag-item w-dyn-item"><div>Campagne</div></div><div role="listitem" class="tag-item w-dyn-item"><div>Social media content</div></div></div></div></div><div class="home--projects_fade"></div><a href="#" class="link-cover w-inline-block"></a></div></div><div data-cursor="Bekijk case" data-parallax="trigger" data-parallax-start="40" data-parallax-end="-40" data-parallax-scrub="1.2" role="listitem" class="home--projects_item w-dyn-item" style="translate: none; rotate: none; scale: none; transform: translate(0%, 40%);"><div class="home--projects_item-link"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-on-hover="" data-video-src="https://pike-productions.b-cdn.net/Cases/MyMarketing/MyMarketing%20LOOP.mp4" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c8a2/69919d861f76fd5f60c30a91_MyMarketing%20Thumbnail.avif" alt="" class="visual_img"><video autoplay="true" loop="" muted="" playsinline="true" src="" class="visual_video is-on-hover"></video><video loop="" playsinline="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;"></video></div><div class="home--projects_item-content"><h3 class="home--projects_item-title">MyMarketing</h3><div class="hide-s w-dyn-list"><div role="list" class="tag-list w-dyn-items"><div role="listitem" class="tag-item w-dyn-item"><div>Social media content</div></div></div></div></div><div class="home--projects_fade"></div><a href="/cases/mymarketing" class="link-cover w-inline-block"></a></div></div><div data-cursor="Bekijk case" data-parallax="trigger" data-parallax-start="60" data-parallax-end="-100" data-parallax-scrub="1.2" role="listitem" class="home--projects_item w-dyn-item" style="translate: none; rotate: none; scale: none; transform: translate(0%, 60%);"><div class="home--projects_item-link"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-on-hover="" data-video-src="https://pike-productions.b-cdn.net/Cases/Bunboyz/Bunboyz%20LOOP.mp4" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c8a2/69919be419f4a1adcc2d55a8_Bunboyz%20Thumbnail.avif" alt="" class="visual_img"><video autoplay="true" loop="" muted="" playsinline="true" src="" class="visual_video is-on-hover"></video><video loop="" playsinline="" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;"></video></div><div class="home--projects_item-content"><h3 class="home--projects_item-title">Bunboyz</h3><div class="hide-s w-dyn-list"><div role="list" class="tag-list w-dyn-items"><div role="listitem" class="tag-item w-dyn-item"><div>Social media content</div></div></div></div></div><div class="home--projects_fade"></div><a href="#" class="link-cover w-inline-block"></a></div></div></div></div><div class="show-s-flex"><div data-wf--button-group--variant="centered"><div data-wf--spacer--variant="medium-2rem" class="spacer w-variant-6fd0da79-0c0e-5c2c-c295-0c99c73355b4"></div><div class="button-group w-variant-f3af87cb-eac0-9aa7-ad62-bdc5595620bf"><div data-wf--button--variant="base" class="button_wrap"><button class="btn is-load-more"><span class="btn_text-wrap"><div class="btn_text">Meer laden</div></span><span class="btn_bg"></span></button></div></div></div></div></div></div></div></div><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb802746e87b561a2e_home-shape-projects.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb802746e87b561a2e_home-shape-projects-p-500.png 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb802746e87b561a2e_home-shape-projects-p-800.png 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb802746e87b561a2e_home-shape-projects-p-1080.png 1080w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb802746e87b561a2e_home-shape-projects-p-1600.png 1600w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb802746e87b561a2e_home-shape-projects.avif 2204w" alt="" class="home--projects_bg bg-img"></section><section class="section_logos"><div class="padding-global"><div class="container-medium"><div class="padding-section-large"><div><div class="logo-cycle_list-wrap"><div class="logo-cycle_list"><div data-logo-wall-item="" class="logo-cycle_item is-top"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def9ad9ed44051e7d6621_Unilin%20Logo%20AZURE.avif" alt="" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def9973ef1f60848d5293_Pukkelpop%20Logo%20AZURE.avif" alt="" class="logo-cycle_img is-small" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"></div><div class="logo-cycle_item is-empty border-bottom"></div><div data-logo-wall-item="" class="logo-cycle_item is-top"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99dc8a3eab1518a131_Factry%20Logo%20AZURE.avif" alt="" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def9a63c5af8ff2af4ade_MyMarketing%20Logo%20AZURE.avif" alt="" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"></div><div class="logo-cycle_item is-empty border-bottom"></div><div data-logo-wall-item="" class="logo-cycle_item is-top"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99dc8a3eab1518a131_Factry%20Logo%20AZURE.avif" alt="" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99dc8a3eab1518a149_Fabric%20Logo%20AZURE.avif" alt="" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"></div><div class="logo-cycle_item is-empty border-right"></div><div data-logo-wall-item="" class="logo-cycle_item is-middle"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def9af0255367472a2255_Universiteit%20Gent%20Logo%20AZURE-p-500.png 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def9af0255367472a2255_Universiteit%20Gent%20Logo%20AZURE.avif 3543w" alt="" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def9af0255367472a2255_Universiteit%20Gent%20Logo%20AZURE.avif" loading="lazy" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99f972dd99a9676d20_The%20Club%20Office%20Logo%20AZURE.avif" alt="" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"></div><div class="logo-cycle_item is-empty middle"></div><div data-logo-wall-item="" class="logo-cycle_item is-middle"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def9a08849da078858eed_Tomorrowland%20Logo%20AZURE.avif" alt="" class="logo-cycle_img is-small" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99f2b47d73db9d4bc3_Bunboyz%20Logo%20AZURE.avif" alt="" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"></div><div class="logo-cycle_item is-empty border-left"></div><div data-logo-wall-item="" class="logo-cycle_item is-bottom"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def9981506442f9f847e8_Ligier%20Logo%20AZURE.avif" alt="" class="logo-cycle_img is-small" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99061d5e7c4f36cdbe_De%20Groeispurters%20Logo%20AZURE.avif" alt="" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"></div><div class="logo-cycle_item is-empty border-top"></div><div data-logo-wall-item="" class="logo-cycle_item is-bottom"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99edee6ae0a75157b4_100%25Light%20Logo%20AZURE-p-500.png 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99edee6ae0a75157b4_100%25Light%20Logo%20AZURE.png 956w" alt="" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99edee6ae0a75157b4_100%25Light%20Logo%20AZURE.png" loading="lazy" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99812342bacdafcd5d_De%20Klifhangers%20Logo%20AZURE.avif" alt="" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"></div><div class="logo-cycle_item is-empty border-top"></div><div data-logo-wall-item="" class="logo-cycle_item is-bottom"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99fab8a7c7534d7c05_Avamoplast%20Logo%20AZURE-p-500.png 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99fab8a7c7534d7c05_Avamoplast%20Logo%20AZURE.avif 2879w" alt="" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def99fab8a7c7534d7c05_Avamoplast%20Logo%20AZURE.avif" loading="lazy" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699def998f781504e9366080_GiGi%20Logo%20AZURE.avif" alt="" class="logo-cycle_img" style="translate: none; rotate: none; scale: none; transform: translate(0%, -80%); opacity: 0;"></div></div></div></div></div></div></div></section><section class="section_werkwijze"><div class="padding-global"><div class="container-large"><div class="padding-section-large"><div class="werkwijze_component"><div class="margin-bottom margin-huge"><div class="max-w-small align-center text-align-center"><h2>Werkwijze</h2></div></div><div class="slider_component" data-slider=""><div class="slider_trim"><div class="slider_wrap swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"><div class="slider_list swiper-wrapper" id="swiper-wrapper-9374fc549301e210c" aria-live="off" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><div class="slider_item swiper-slide is-active" role="group" aria-label="1 / 5"><div class="slide-werkwijze"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="user-select: none;" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991afff82ddb2bedfdeb82f_werkwijze-bg.avif" alt="" class="visual_img"></div><div class="slide-werkwijze_inner"><div class="slide-werkwijze_top"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69918897e7fe68129c76d293_service-icon-1.svg" loading="lazy" alt="" class="slide-werkwijze_icon"></div><div class="slide-werkwijze_bot"><h3 class="h4 tw-bold">Pre-productie</h3><p>In de pre-productie wordt het concept uitgewerkt en alles voorbereid, zoals hetscript, de planning en de locaties. Dit is de fase waarin keuzes worden gemaakt diede shoot efficiënt en doelgericht laten verlopen.</p></div></div><div class="o-50"></div></div></div><div class="slider_item swiper-slide swiper-slide-next" role="group" aria-label="2 / 5"><div class="slide-werkwijze"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="user-select: none;" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991afff82ddb2bedfdeb82f_werkwijze-bg.avif" alt="" class="visual_img"></div><div class="slide-werkwijze_inner"><div class="slide-werkwijze_top"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69918897951cee771a26a4d4_service-icon-2.svg" loading="lazy" alt="" class="slide-werkwijze_icon"></div><div class="slide-werkwijze_bot"><h3 class="h4 tw-bold">Shoot</h3><p>De shoot is het moment waarop alle beelden daadwerkelijk worden opgenomenvolgens de planning. Camera, licht, geluid en regie komen hier samen om hetconcept vast te leggen.</p></div></div><div class="o-50"></div></div></div><div class="slider_item swiper-slide" role="group" aria-label="3 / 5"><div class="slide-werkwijze"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="user-select: none;" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991afff82ddb2bedfdeb82f_werkwijze-bg.avif" alt="" class="visual_img"></div><div class="slide-werkwijze_inner"><div class="slide-werkwijze_top"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991889724b9e56702b7a922_service-icon-3.svg" loading="lazy" alt="" class="slide-werkwijze_icon"></div><div class="slide-werkwijze_bot"><h3 class="h4 tw-bold"><strong>Post-productie</strong></h3><p>In de post-productie worden de opgenomen beelden gemonteerd en bewerkt tot eensamenhangende video. Denk hierbij aan montage, kleurcorrectie, geluid eneventuele animaties.</p></div></div><div class="o-50"></div></div></div><div class="slider_item swiper-slide" role="group" aria-label="4 / 5"><div class="slide-werkwijze"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="user-select: none;" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991afff82ddb2bedfdeb82f_werkwijze-bg.avif" alt="" class="visual_img"></div><div class="slide-werkwijze_inner"><div class="slide-werkwijze_top"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69918897d27aba452b49f500_service-icon-4.svg" loading="lazy" alt="" class="slide-werkwijze_icon"></div><div class="slide-werkwijze_bot"><h3 class="h4 tw-bold">Feedback</h3><p>Tijdens de feedbackfase bekijkt de opdrachtgever de video en geeft gerichte opmerkingen of aanpassingen door. Deze feedback wordt gebruikt om de video verder te verfijnen.</p></div></div><div class="o-50"></div></div></div><div class="slider_item swiper-slide" role="group" aria-label="5 / 5"><div class="slide-werkwijze"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="user-select: none;" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991afff82ddb2bedfdeb82f_werkwijze-bg.avif" alt="" class="visual_img"></div><div class="slide-werkwijze_inner"><div class="slide-werkwijze_top"><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/699188976dc902dbeb4fe8dd_service-icon-5.svg" loading="lazy" alt="" class="slide-werkwijze_icon"></div><div class="slide-werkwijze_bot"><h3 class="h4 tw-bold">Delivery</h3><p>Bij de delivery wordt de definitieve video opgeleverd in de afgesproken formaten. Dit is het eindresultaat dat klaar is voor publicatie of verspreiding.</p></div></div><div class="o-50"></div></div></div></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div></div><div class="slider_layout"><div class="slider_button_layout"><div class="slider_button is-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-9374fc549301e210c" aria-disabled="true"><div class="slider-button_svg w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.3532 5.57143L5.38843 0.606642L6 -5.24537e-07L12 6L6 12L5.38843 11.3934L10.3532 6.42857L4.8707e-07 6.42857L5.62004e-07 5.57143L10.3532 5.57143Z" fill="currentColor"></path>
+</svg></div></div><div class="slider_button is-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-9374fc549301e210c" aria-disabled="false"><div class="slider-button_svg w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.3532 5.57143L5.38843 0.606642L6 -5.24537e-07L12 6L6 12L5.38843 11.3934L10.3532 6.42857L4.8707e-07 6.42857L5.62004e-07 5.57143L10.3532 5.57143Z" fill="currentColor"></path>
+</svg></div></div></div></div><div class="slider_embed w-embed w-script"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".slider_component").forEach((component) => {
+    if (component.hasAttribute("data-slider")) return;
+    component.setAttribute("data-slider", "");
+
+    const sliderElement = component.querySelector(".slider_wrap");
+    if (!sliderElement) return;
+
+    const swiper = new Swiper(sliderElement, {
+      slidesPerView: "auto",
+      followFinger: true,
+      freeMode: false,
+      slideToClickedSlide: false,
+      centeredSlides: false,
+      autoHeight: false,
+      speed: 600,
+      autoplay: {
+        delay: 4000,
+      },
+      mousewheel: { forceToAxis: true },
+      keyboard: { enabled: true, onlyInViewport: true },
+      navigation: {
+        nextEl: component.parentElement.querySelector(".slider_button.is-next"),
+        prevEl: component.parentElement.querySelector(".slider_button.is-prev"),
+      },
+      pagination: {
+        el: component.parentElement.querySelector(".slider_bullet_wrap"),
+        bulletActiveClass: "is-active",
+        bulletClass: "slider_bullet_item",
+        bulletElement: "button",
+        clickable: true,
+      },
+      slideActiveClass: "is-active",
+      slideDuplicateActiveClass: "is-active",
+    });
+  });
+});
+</script></div></div></div></div></div></div></section><section class="section_home--intro"><div class="padding-global u-rel-z-3"><div class="container-large"><div class="padding-section-large"><div class="home--intro_grid u-grid"><div data-parallax="trigger" id="w-node-e7b8709d-32c6-cb23-add7-963771ed5f0d-6652c86b" class="home--intro_wrap-1 parallax-parent" style="translate: none; rotate: none; scale: none; transform: translate(0%, 20%);"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab97c691c180dd12dfae_84f06c9e6213cae88e17ac7e7fd8ea0a_home-outro-1.jpg" alt="" class="visual_img"></div></div><div id="w-node-_7186ae7e-7c25-221b-d38c-5214427dbf9c-6652c86b" class="home--intro_wrap-2 parallax-parent is--outro"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69adab977d559d26ea4c83a6_8bdb3752290b99007ebf12c344045db0_home-outro-2.jpg" alt="" class="visual_img"></div></div></div></div></div></div><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffa7af5ec8d954f294a_home-shape-2.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffa7af5ec8d954f294a_home-shape-2-p-500.png 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffa7af5ec8d954f294a_home-shape-2-p-800.png 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffa7af5ec8d954f294a_home-shape-2.avif 965w" alt="" class="home--outro-gallery_bg bg-img"></section><section class="section_reviews"><div class="padding-global"><div class="container-large"><div class="padding-section-large"><div class="reviews_component u-grid"><div id="w-node-_32d7b0b7-02d0-1b06-ef2c-18871e9fbeef-6652c86b" class="reviews_content"><div class="margin-bottom margin-huge"><div class="margin-bottom margin-medium"><h2 class="h3">Wat onze video’s teweegbrengen</h2></div><p>Echte verhalen, echte resultaten. Dit is hoe onze video’s merken vooruithelpen.</p></div><div class="slider_layout"><div class="slider_button_layout is-left"><div class="slider_button is-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-a55374db9da54ef3" aria-disabled="false"><div class="slider-button_svg w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.3532 5.57143L5.38843 0.606642L6 -5.24537e-07L12 6L6 12L5.38843 11.3934L10.3532 6.42857L4.8707e-07 6.42857L5.62004e-07 5.57143L10.3532 5.57143Z" fill="currentColor"></path>
+</svg></div></div><div class="slider_button is-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-a55374db9da54ef3" aria-disabled="false"><div class="slider-button_svg w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.3532 5.57143L5.38843 0.606642L6 -5.24537e-07L12 6L6 12L5.38843 11.3934L10.3532 6.42857L4.8707e-07 6.42857L5.62004e-07 5.57143L10.3532 5.57143Z" fill="currentColor"></path>
+</svg></div></div></div></div></div><div data-cursor="Versleep mij" id="w-node-_15b5b929-a3ff-6a88-e807-acaba833664a-6652c86b" class="slider_component" data-slider=""><div class="slider_trim is--reviews"><div class="slider_wrap swiper is--reviews w-dyn-list swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"><div role="list" class="slider_list swiper-wrapper is--reviews w-dyn-items" id="swiper-wrapper-a55374db9da54ef3" aria-live="off" style="transform: translate3d(-486.406px, 0px, 0px); transition-duration: 0ms;"><div role="group" class="slider_item swiper-slide is--review w-dyn-item swiper-slide-prev" aria-label="1 / 6"><div class="slide-werkwijze"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991afff82ddb2bedfdeb82f_werkwijze-bg.avif" alt="" class="visual_img"></div><div class="slide-review_inner"><div class="slide-review_top"><div class="slide-review_top-left"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c8a2/69ad939d91b5af6b6a5b3728_avatar--mymarketing.png" alt="" class="slide-review_img"><div class="slide-review_person">Kristof Paermentier</div></div><div class="slide-review_top-right"><div class="slide-review_tag tag-item">CEO MyMarketing</div></div></div><div class="slide-werkwijze_bot"><div class="w-richtext"><p>Stef is geweldig om mee samen te werken.</p><p>We hebben nu al video's met hem gemaakt voor een tiental klanten, hij brengt superkwaliteit, en snapt wat de klant wil. </p></div></div></div></div></div><div role="group" class="slider_item swiper-slide is--review w-dyn-item is-active" aria-label="2 / 6"><div class="slide-werkwijze"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991afff82ddb2bedfdeb82f_werkwijze-bg.avif" alt="" class="visual_img"></div><div class="slide-review_inner"><div class="slide-review_top"><div class="slide-review_top-left"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c8a2/69ad9384baa4f1542af9cae9_avatar--bunboyz-1.png" alt="" class="slide-review_img"><div class="slide-review_person">Evy Piron</div></div><div class="slide-review_top-right"><div class="slide-review_tag tag-item">Marketing Assistent Avamoplast</div></div></div><div class="slide-werkwijze_bot"><div class="w-richtext"><p>Top samenwerking voor onze bedrijfs- en rekruteringsfilm! </p><p>Ze dachten actief mee, werkten heel vlot en leverden een sterk eindresultaat af waar we trots op zijn.</p></div></div></div></div></div><div role="group" class="slider_item swiper-slide is--review w-dyn-item swiper-slide-next" aria-label="3 / 6"><div class="slide-werkwijze"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991afff82ddb2bedfdeb82f_werkwijze-bg.avif" alt="" class="visual_img"></div><div class="slide-review_inner"><div class="slide-review_top"><div class="slide-review_top-left"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c8a2/69ad93611a0363bb9caadd9a_avatar--zwemschooltje.png" alt="" class="slide-review_img"><div class="slide-review_person">Lothar Van den Borre</div></div><div class="slide-review_top-right"><div class="slide-review_tag tag-item">CEO Zwemschooltje</div></div></div><div class="slide-werkwijze_bot"><div class="w-richtext"><p>Top kerel, luistert naar de wensen. Voelt aan wat de klant graag wilt. Stef heeft ondertussen al 10 tallen filmpjes gemaakt voor ons.</p></div></div></div></div></div><div role="group" class="slider_item swiper-slide is--review w-dyn-item" aria-label="4 / 6"><div class="slide-werkwijze"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991afff82ddb2bedfdeb82f_werkwijze-bg.avif" alt="" class="visual_img"></div><div class="slide-review_inner"><div class="slide-review_top"><div class="slide-review_top-left"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c8a2/69ad9347fc8be1b0805d978a_avatar--factry.png" alt="" class="slide-review_img"><div class="slide-review_person">Jente De Meyer</div></div><div class="slide-review_top-right"><div class="slide-review_tag tag-item">Marketing manager bij Factry</div></div></div><div class="slide-werkwijze_bot"><div class="w-richtext"><p>Pike Productions biedt alles wat je tegenwoordig van video verwacht. De communicatie, beschikbaarheid en levering zijn uitstekend. Professioneel, snel en prettig om mee samen te werken. Een echte aanrader.</p></div></div></div></div></div><div role="group" class="slider_item swiper-slide is--review w-dyn-item" aria-label="5 / 6"><div class="slide-werkwijze"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991afff82ddb2bedfdeb82f_werkwijze-bg.avif" alt="" class="visual_img"></div><div class="slide-review_inner"><div class="slide-review_top"><div class="slide-review_top-left"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c8a2/69ad92f63285f713bb4f7043_avatar--bunboyz.png" alt="" class="slide-review_img"><div class="slide-review_person">Julot Blondia</div></div><div class="slide-review_top-right"><div class="slide-review_tag tag-item">CEO Bunboyz</div></div></div><div class="slide-werkwijze_bot"><div class="w-richtext"><p>Stef was professioneel en creatief, en begreep precies wat we nodig hadden om onze unieke stijl en sfeer vast te leggen. De visuals zijn van hoge kwaliteit en hebben ons geholpen om onze online aanwezigheid te versterken en meer klanten aan te trekken.</p></div></div></div></div></div><div role="group" class="slider_item swiper-slide is--review w-dyn-item" aria-label="6 / 6"><div class="slide-werkwijze"><div data-wf--visual--variant="base" data-parallax="" data-parallax-start="-20" data-video-src="" style="" class="visual_wrap parallax"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/6991afff82ddb2bedfdeb82f_werkwijze-bg.avif" alt="" class="visual_img"></div><div class="slide-review_inner"><div class="slide-review_top"><div class="slide-review_top-left"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c8a2/69ad919027961ac98c6a52ec_Niels%20De%20Maerteleire%20profielfoto.jpg" alt="" class="slide-review_img"><div class="slide-review_person">Niels De Maerteleire</div></div><div class="slide-review_top-right"><div class="slide-review_tag tag-item">CEO NDM Branding</div></div></div><div class="slide-werkwijze_bot"><div class="w-richtext"><p>Zelden zo’n soepele en professionele samenwerking gehad als met Stef van Pike Productions. Hij is een dedicated ondernemer, altijd bereikbaar en reageert snel. Zijn betrokkenheid bij elk detail maakte het verschil. Een partner die ik zonder twijfel aanbeveel!</p></div></div></div></div></div></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><div class="slider_fade-left"></div></div></div></div></div></div></div></section><div class="home--outro_wrap"><div class="shape-trigger"><section class="section_cta"><div class="padding-global"><div class="container-large"><div class="padding-section-large"><div class="max-w-xmedium align-center"><div class="heading_component is-centered"><h2 class="h2 t-a-center">Breng jouw verhaal professioneel tot leven</h2><div class="margin-vertical margin-medium"><div class="max-w-xsmall"><p>Neem vrijblijvend contact met ons op om te luisteren wat wij voor jou kunnen betekenen.</p></div></div><div data-wf--button-group--variant="base"><div class="button-group"><div data-wf--button--variant="outline" class="button_wrap"><a href="/contact" class="btn w-variant-b2031905-7ffb-05c3-ce5b-e0a3f3f1f37c w-inline-block"><span class="btn_text-wrap"><div class="btn_text">Contacteer ons</div></span><span class="btn_bg w-variant-b2031905-7ffb-05c3-ce5b-e0a3f3f1f37c"></span></a></div></div></div></div></div></div></div></div></section><section class="section_accordion"><img loading="lazy" src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69a423bd09bce5006ae01643_074ea01a351219e058a4a4455baa5a66_faq-shape.svg" alt="" class="faq-shape" style="translate: none; rotate: none; scale: none; transform: translate(0px, 30vh);"><div class="padding-global"><div class="container-large"><div class="padding-section-large"><div class="faq_component"><div class="heading_component"><div class="margin-bottom margin-large"><h2 class="h2 t-a-center">FAQ</h2></div></div><div class="align-center max-w-xlarge"><div class="accordion_container"><div class="u-embed-css w-embed"><style>
+  .wf-design-mode .accordion_content_wrap {
+    display: block;
+  }
+</style></div><div data-close-previous="false" data-close-on-second-click="true" data-open-on-hover="false" data-open-by-default="1" class="accordion_wrap" data-script-initialized="true"><div class="w-dyn-list"><div role="list" class="accordion_list w-dyn-items is-5-max"><div role="listitem" class="accordion_item-wrap w-dyn-item"><div data-lenis-resize="" class="accordion_item"><div class="accordion_component is-opened"><h3 class="accordion_toggle_heading"><button aria-expanded="true" class="accordion_toggle_button" id="accordion_button_0_0" aria-controls="accordion_content_0_0"><div class="accordion_toggle_text-wrap"><span class="accordion_toggle_text-number_wrap"><span>(</span><span class="accordion_toggle_text-number">01</span><span>)</span></span><div class="accordion_toggle_text">Wat doet Pike Productions nu precies?</div></div><span class="accordion_toggle_icon"><div class="accordion_toggle_svg"></div><div class="accordion_toggle_svg is-vertical" style="translate: none; rotate: none; scale: none; transform: rotate(-90deg);"></div></span></button></h3><div class="accordion_content_wrap" id="accordion_content_0_0" aria-labelledby="accordion_button_0_0" style="display: block; height: auto;"><div class="accordion_content_padding"><div class="accordion_content_text w-richtext text-rich-text"><p>Pike Productions is een kleinschalig videoproductiehuis en strategische videopartner voor bedrijven. </p><p>Wij helpen organisaties met consistente, professionele videocontent, om zo zichtbaar te blijven en hun verhaal effectief over te brengen.</p></div></div></div></div></div></div><div role="listitem" class="accordion_item-wrap w-dyn-item"><div data-lenis-resize="" class="accordion_item"><div class="accordion_component"><h3 class="accordion_toggle_heading"><button aria-expanded="false" class="accordion_toggle_button" id="accordion_button_0_1" aria-controls="accordion_content_0_1"><div class="accordion_toggle_text-wrap"><span class="accordion_toggle_text-number_wrap"><span>(</span><span class="accordion_toggle_text-number">02</span><span>)</span></span><div class="accordion_toggle_text">In welke regio zijn jullie voornamelijk actief?</div></div><span class="accordion_toggle_icon"><div class="accordion_toggle_svg"></div><div class="accordion_toggle_svg is-vertical" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"></div></span></button></h3><div class="accordion_content_wrap" id="accordion_content_0_1" aria-labelledby="accordion_button_0_1" style="display: none; height: 0px;"><div class="accordion_content_padding"><div class="accordion_content_text w-richtext text-rich-text"><p>Wij zijn voornamelijk actief binnen en rondom de Benelux, maar nemen ook met plezier internationale projecten aan!</p></div></div></div></div></div></div><div role="listitem" class="accordion_item-wrap w-dyn-item"><div data-lenis-resize="" class="accordion_item"><div class="accordion_component"><h3 class="accordion_toggle_heading"><button aria-expanded="false" class="accordion_toggle_button" id="accordion_button_0_2" aria-controls="accordion_content_0_2"><div class="accordion_toggle_text-wrap"><span class="accordion_toggle_text-number_wrap"><span>(</span><span class="accordion_toggle_text-number">03</span><span>)</span></span><div class="accordion_toggle_text">Wat als we al een idee of concept hebben?</div></div><span class="accordion_toggle_icon"><div class="accordion_toggle_svg"></div><div class="accordion_toggle_svg is-vertical" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"></div></span></button></h3><div class="accordion_content_wrap" id="accordion_content_0_2" aria-labelledby="accordion_button_0_2" style="display: none; height: 0px;"><div class="accordion_content_padding"><div class="accordion_content_text w-richtext text-rich-text"><p>Zoveel te beter! We werken graag met bestaande ideeën of concepten, zo kunnen wij ons volledig focussen op waar we in uitblinken: de technische realisatie. Van camera en belichting tot geluid en montage zorgen we voor een hoogwaardige uitvoering die het idee tot zijn recht laat komen.</p></div></div></div></div></div></div><div role="listitem" class="accordion_item-wrap w-dyn-item"><div data-lenis-resize="" class="accordion_item"><div class="accordion_component"><h3 class="accordion_toggle_heading"><button aria-expanded="false" class="accordion_toggle_button" id="accordion_button_0_3" aria-controls="accordion_content_0_3"><div class="accordion_toggle_text-wrap"><span class="accordion_toggle_text-number_wrap"><span>(</span><span class="accordion_toggle_text-number">04</span><span>)</span></span><div class="accordion_toggle_text">Hoelang duurt een videoproductie?</div></div><span class="accordion_toggle_icon"><div class="accordion_toggle_svg"></div><div class="accordion_toggle_svg is-vertical" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"></div></span></button></h3><div class="accordion_content_wrap" id="accordion_content_0_3" aria-labelledby="accordion_button_0_3" style="display: none; height: 0px;"><div class="accordion_content_padding"><div class="accordion_content_text w-richtext text-rich-text"><p>In de meeste gevallen leveren we binnen 14 dagen af na opnames, maar exacte timings stemmen we altijd vooraf af. Elke videoproductie is namelijk maatwerk. De doorlooptijd hangt af van het projecttype, de voorbereiding en de montage.</p></div></div></div></div></div></div><div role="listitem" class="accordion_item-wrap w-dyn-item"><div data-lenis-resize="" class="accordion_item"><div class="accordion_component"><h3 class="accordion_toggle_heading"><button aria-expanded="false" class="accordion_toggle_button" id="accordion_button_0_4" aria-controls="accordion_content_0_4"><div class="accordion_toggle_text-wrap"><span class="accordion_toggle_text-number_wrap"><span>(</span><span class="accordion_toggle_text-number">05</span><span>)</span></span><div class="accordion_toggle_text">Kunnen jullie ook korte versies maken voor op social media?</div></div><span class="accordion_toggle_icon"><div class="accordion_toggle_svg"></div><div class="accordion_toggle_svg is-vertical" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"></div></span></button></h3><div class="accordion_content_wrap" id="accordion_content_0_4" aria-labelledby="accordion_button_0_4" style="display: none; height: 0px;"><div class="accordion_content_padding"><div class="accordion_content_text w-richtext text-rich-text"><p>Absoluut. Social media vraagt om korte, krachtige content. We maken daarom graag extra korte versies van een videoproject, afgestemd op de verschillende platformen en formaten.</p></div></div></div></div></div></div><div role="listitem" class="accordion_item-wrap w-dyn-item"><div data-lenis-resize="" class="accordion_item" style="display: none;"><div class="accordion_component"><h3 class="accordion_toggle_heading"><button aria-expanded="false" class="accordion_toggle_button" id="accordion_button_0_5" aria-controls="accordion_content_0_5"><div class="accordion_toggle_text-wrap"><span class="accordion_toggle_text-number_wrap"><span>(</span><span class="accordion_toggle_text-number">06</span><span>)</span></span><div class="accordion_toggle_text">Hoeveel feedbackrondes zijn inbegrepen?</div></div><span class="accordion_toggle_icon"><div class="accordion_toggle_svg"></div><div class="accordion_toggle_svg is-vertical" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"></div></span></button></h3><div class="accordion_content_wrap" id="accordion_content_0_5" aria-labelledby="accordion_button_0_5" style="display: none; height: 0px;"><div class="accordion_content_padding"><div class="accordion_content_text w-richtext text-rich-text"><p>Standaard is één feedbackronde inbegrepen. Zo bundelen we alle feedback zoveel mogelijk en houden we het proces efficiënt.</p></div></div></div></div></div></div><div role="listitem" class="accordion_item-wrap w-dyn-item"><div data-lenis-resize="" class="accordion_item" style="display: none;"><div class="accordion_component"><h3 class="accordion_toggle_heading"><button aria-expanded="false" class="accordion_toggle_button" id="accordion_button_0_6" aria-controls="accordion_content_0_6"><div class="accordion_toggle_text-wrap"><span class="accordion_toggle_text-number_wrap"><span>(</span><span class="accordion_toggle_text-number">07</span><span>)</span></span><div class="accordion_toggle_text">Hoeveel kost een video?</div></div><span class="accordion_toggle_icon"><div class="accordion_toggle_svg"></div><div class="accordion_toggle_svg is-vertical" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"></div></span></button></h3><div class="accordion_content_wrap" id="accordion_content_0_6" aria-labelledby="accordion_button_0_6" style="display: none; height: 0px;"><div class="accordion_content_padding"><div class="accordion_content_text w-richtext text-rich-text"><p>De prijs van een videoproductie verschilt per project en hangt onder andere af van het concept, de lengte, de crew, de apparatuur, de montage, … We stellen daarom graag een offerte op maat op.</p></div></div></div></div></div></div><div role="listitem" class="accordion_item-wrap w-dyn-item"><div data-lenis-resize="" class="accordion_item" style="display: none;"><div class="accordion_component"><h3 class="accordion_toggle_heading"><button aria-expanded="false" class="accordion_toggle_button" id="accordion_button_0_7" aria-controls="accordion_content_0_7"><div class="accordion_toggle_text-wrap"><span class="accordion_toggle_text-number_wrap"><span>(</span><span class="accordion_toggle_text-number">08</span><span>)</span></span><div class="accordion_toggle_text">Mogen we de video’s overal gebruiken?</div></div><span class="accordion_toggle_icon"><div class="accordion_toggle_svg"></div><div class="accordion_toggle_svg is-vertical" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"></div></span></button></h3><div class="accordion_content_wrap" id="accordion_content_0_7" aria-labelledby="accordion_button_0_7" style="display: none; height: 0px;"><div class="accordion_content_padding"><div class="accordion_content_text w-richtext text-rich-text"><p>Jazeker. Eens de betaling voldaan is, krijg je het gebruiksrecht op jouw video’s en kan je ze online posten en tonen op events. Het auteursrecht blijft bij Pike Productions, tenzij anders overeengekomen.</p></div></div></div></div></div></div><div role="listitem" class="accordion_item-wrap w-dyn-item"><div data-lenis-resize="" class="accordion_item" style="display: none;"><div class="accordion_component"><h3 class="accordion_toggle_heading"><button aria-expanded="false" class="accordion_toggle_button" id="accordion_button_0_8" aria-controls="accordion_content_0_8"><div class="accordion_toggle_text-wrap"><span class="accordion_toggle_text-number_wrap"><span>(</span><span class="accordion_toggle_text-number">09</span><span>)</span></span><div class="accordion_toggle_text">Doen jullie ook animaties of drone-opnames?</div></div><span class="accordion_toggle_icon"><div class="accordion_toggle_svg"></div><div class="accordion_toggle_svg is-vertical" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"></div></span></button></h3><div class="accordion_content_wrap" id="accordion_content_0_8" aria-labelledby="accordion_button_0_8" style="display: none; height: 0px;"><div class="accordion_content_padding"><div class="accordion_content_text w-richtext text-rich-text"><p>Basis animaties en drone-opnames zitten standaard inbegrepen en worden ingezet wanneer dit een inhoudelijke meerwaarde heeft. Voor volledig geanimeerde video’s of specifieke toepassingen, zoals indoor/FPV drone-opnames, werken we samen met ervaren freelance specialisten.</p><p>‍</p></div></div></div></div></div></div><div role="listitem" class="accordion_item-wrap w-dyn-item"><div data-lenis-resize="" class="accordion_item" style="display: none;"><div class="accordion_component"><h3 class="accordion_toggle_heading"><button aria-expanded="false" class="accordion_toggle_button" id="accordion_button_0_9" aria-controls="accordion_content_0_9"><div class="accordion_toggle_text-wrap"><span class="accordion_toggle_text-number_wrap"><span>(</span><span class="accordion_toggle_text-number">10</span><span>)</span></span><div class="accordion_toggle_text">Kunnen jullie helpen met publicatie of advertenties?</div></div><span class="accordion_toggle_icon"><div class="accordion_toggle_svg"></div><div class="accordion_toggle_svg is-vertical" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"></div></span></button></h3><div class="accordion_content_wrap" id="accordion_content_0_9" aria-labelledby="accordion_button_0_9" style="display: none; height: 0px;"><div class="accordion_content_padding"><div class="accordion_content_text w-richtext text-rich-text"><p>Onze expertise ligt 101% bij videoproductie, maar indien gewenst brengen we jullie graag in contact met ervaren en betrouwbare partners voor de publicatie en advertenties van jullie project.</p></div></div></div></div></div></div></div></div><div data-wf--button-group--variant="centered"><div data-wf--spacer--variant="medium-2rem" class="spacer w-variant-6fd0da79-0c0e-5c2c-c295-0c99c73355b4"></div><div class="button-group w-variant-f3af87cb-eac0-9aa7-ad62-bdc5595620bf"><div data-wf--button--variant="base" class="button_wrap"><button class="btn is-load-more"><span class="btn_text-wrap"><div class="btn_text">Meer laden</div></span><span class="btn_bg"></span></button></div></div></div></div></div></div></div></div></div></div></section></div><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb8cd7abe98ba7883f_be1c4c93596b253fd4b24852b0f50db9_home-shape-outro.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb8cd7abe98ba7883f_be1c4c93596b253fd4b24852b0f50db9_home-shape-outro-p-500.png 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb8cd7abe98ba7883f_be1c4c93596b253fd4b24852b0f50db9_home-shape-outro-p-800.png 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb8cd7abe98ba7883f_be1c4c93596b253fd4b24852b0f50db9_home-shape-outro-p-1080.png 1080w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb8cd7abe98ba7883f_be1c4c93596b253fd4b24852b0f50db9_home-shape-outro-p-1600.png 1600w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69bacffb8cd7abe98ba7883f_be1c4c93596b253fd4b24852b0f50db9_home-shape-outro.avif 2160w" alt="" class="home--outro_bg bg-img"></div><div><div class="u-rel-z-1"></div><div class="u-rel-z-2"></div><div class="u-rel-z-3"></div><div class="u-display-contents"></div><div class="u-embed-css"></div><div class="u-embed-js"></div><div class="theme-blue"></div><div class="theme-dark"></div><div class="rich-text-inherit"></div><div class="text-wrap-balance"></div><div class="show-m-block"></div><div class="show-s-block"></div><div class="show-xs-block"></div><div class="show-m-flex"></div><div class="show-s-flex"></div><div class="show-xs-flex"></div><div class="parallax"><div class="parallax-parent"></div></div></div></main><div class="footer_container"><footer class="footer_component"><div class="padding-global"><div class="container-large"><div class="footer_divider" style="translate: none; rotate: none; scale: none; transform: scale(0, 0);"></div><div class="footer-component"><div class="footer-content-wrapper"><div class="footer_cta"><div>Investeer in videocontent die resultaat oplevert.</div><div data-wf--button--variant="outline" class="button_wrap"><a href="/contact" class="btn w-variant-b2031905-7ffb-05c3-ce5b-e0a3f3f1f37c w-inline-block"><span class="btn_text-wrap"><div class="btn_text">Contact</div></span><span class="btn_bg w-variant-b2031905-7ffb-05c3-ce5b-e0a3f3f1f37c"></span></a></div></div><div class="footer_right-side"><div class="footer_col_wrap"><div class="footer_col_item"><p class="footer_col_item-title">Navigeer</p><div class="footer-links"><a href="/" aria-current="page" class="footer_link w-inline-block w--current"><span class="footer_link_inner"><span>Home</span><span class="footer_link-arrow-parent"><div class="footer_link-arrow w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.292815 10.2929C0.68328 10.6834 1.31635 10.6834 1.70682 10.2929L5.99971 6.00004C6.39023 5.60952 6.39023 4.97635 5.99971 4.58583L1.70681 0.292937C1.31635 -0.0975282 0.68328 -0.097528 0.292815 0.292937C-0.0976501 0.683403 -0.0976499 1.31647 0.292815 1.70694L3.17171 4.58583C3.56223 4.97635 3.56223 5.60952 3.17171 6.00004L0.292816 8.87894C-0.0976492 9.2694 -0.0976502 9.90247 0.292815 10.2929Z" fill="currentColor"></path>
+</svg></div></span></span></a><a href="/cases" class="footer_link w-inline-block"><span class="footer_link_inner"><span>Cases</span><span class="footer_link-arrow-parent"><div class="footer_link-arrow w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.292815 10.2929C0.68328 10.6834 1.31635 10.6834 1.70682 10.2929L5.99971 6.00004C6.39023 5.60952 6.39023 4.97635 5.99971 4.58583L1.70681 0.292937C1.31635 -0.0975282 0.68328 -0.097528 0.292815 0.292937C-0.0976501 0.683403 -0.0976499 1.31647 0.292815 1.70694L3.17171 4.58583C3.56223 4.97635 3.56223 5.60952 3.17171 6.00004L0.292816 8.87894C-0.0976492 9.2694 -0.0976502 9.90247 0.292815 10.2929Z" fill="currentColor"></path>
+</svg></div></span></span></a></div></div><div class="footer_col_item"><p class="footer_col_item-title">Diensten</p><div class="footer-links"><a href="/over-ons" class="footer_link w-inline-block"><span class="footer_link_inner"><span>Over ons</span><span class="footer_link-arrow-parent"><div class="footer_link-arrow w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.292815 10.2929C0.68328 10.6834 1.31635 10.6834 1.70682 10.2929L5.99971 6.00004C6.39023 5.60952 6.39023 4.97635 5.99971 4.58583L1.70681 0.292937C1.31635 -0.0975282 0.68328 -0.097528 0.292815 0.292937C-0.0976501 0.683403 -0.0976499 1.31647 0.292815 1.70694L3.17171 4.58583C3.56223 4.97635 3.56223 5.60952 3.17171 6.00004L0.292816 8.87894C-0.0976492 9.2694 -0.0976502 9.90247 0.292815 10.2929Z" fill="currentColor"></path>
+</svg></div></span></span></a><a href="/contact" class="footer_link w-inline-block"><span class="footer_link_inner"><span>Contact</span><span class="footer_link-arrow-parent"><div class="footer_link-arrow w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.292815 10.2929C0.68328 10.6834 1.31635 10.6834 1.70682 10.2929L5.99971 6.00004C6.39023 5.60952 6.39023 4.97635 5.99971 4.58583L1.70681 0.292937C1.31635 -0.0975282 0.68328 -0.097528 0.292815 0.292937C-0.0976501 0.683403 -0.0976499 1.31647 0.292815 1.70694L3.17171 4.58583C3.56223 4.97635 3.56223 5.60952 3.17171 6.00004L0.292816 8.87894C-0.0976492 9.2694 -0.0976502 9.90247 0.292815 10.2929Z" fill="currentColor"></path>
+</svg></div></span></span></a></div></div><div class="footer_col_item"><p class="footer_col_item-title">Socials</p><div class="footer-links"><a href="https://www.instagram.com/pike.productions/?hl=en" target="_blank" class="footer_link w-inline-block"><span class="footer_link_inner"><span>Instagram</span><span class="footer_link-arrow-parent"><div class="footer_link-arrow w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.292815 10.2929C0.68328 10.6834 1.31635 10.6834 1.70682 10.2929L5.99971 6.00004C6.39023 5.60952 6.39023 4.97635 5.99971 4.58583L1.70681 0.292937C1.31635 -0.0975282 0.68328 -0.097528 0.292815 0.292937C-0.0976501 0.683403 -0.0976499 1.31647 0.292815 1.70694L3.17171 4.58583C3.56223 4.97635 3.56223 5.60952 3.17171 6.00004L0.292816 8.87894C-0.0976492 9.2694 -0.0976502 9.90247 0.292815 10.2929Z" fill="currentColor"></path>
+</svg></div></span></span></a><a href="https://www.linkedin.com/company/pike-productions-video-production-agency/" target="_blank" class="footer_link w-inline-block"><span class="footer_link_inner"><span>LinkedIn</span><span class="footer_link-arrow-parent"><div class="footer_link-arrow w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.292815 10.2929C0.68328 10.6834 1.31635 10.6834 1.70682 10.2929L5.99971 6.00004C6.39023 5.60952 6.39023 4.97635 5.99971 4.58583L1.70681 0.292937C1.31635 -0.0975282 0.68328 -0.097528 0.292815 0.292937C-0.0976501 0.683403 -0.0976499 1.31647 0.292815 1.70694L3.17171 4.58583C3.56223 4.97635 3.56223 5.60952 3.17171 6.00004L0.292816 8.87894C-0.0976492 9.2694 -0.0976502 9.90247 0.292815 10.2929Z" fill="currentColor"></path>
+</svg></div></span></span></a></div></div><div class="footer_col_item"><p class="footer_col_item-title">Contact</p><div class="footer-links"><a href="mailto:stef@pikeproductions.be" class="footer_link w-inline-block"><span class="footer_link_inner"><span>stef@pikeproductions.be</span><span class="footer_link-arrow-parent"><div class="footer_link-arrow w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.292815 10.2929C0.68328 10.6834 1.31635 10.6834 1.70682 10.2929L5.99971 6.00004C6.39023 5.60952 6.39023 4.97635 5.99971 4.58583L1.70681 0.292937C1.31635 -0.0975282 0.68328 -0.097528 0.292815 0.292937C-0.0976501 0.683403 -0.0976499 1.31647 0.292815 1.70694L3.17171 4.58583C3.56223 4.97635 3.56223 5.60952 3.17171 6.00004L0.292816 8.87894C-0.0976492 9.2694 -0.0976502 9.90247 0.292815 10.2929Z" fill="currentColor"></path>
+</svg></div></span></span></a><a href="tel:+32(0)475523648" class="footer_link w-inline-block"><span class="footer_link_inner"><span>+32 (0) 475 52 36 48</span><span class="footer_link-arrow-parent"><div class="footer_link-arrow w-embed"><svg width=" 100%" height=" 100%" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.292815 10.2929C0.68328 10.6834 1.31635 10.6834 1.70682 10.2929L5.99971 6.00004C6.39023 5.60952 6.39023 4.97635 5.99971 4.58583L1.70681 0.292937C1.31635 -0.0975282 0.68328 -0.097528 0.292815 0.292937C-0.0976501 0.683403 -0.0976499 1.31647 0.292815 1.70694L3.17171 4.58583C3.56223 4.97635 3.56223 5.60952 3.17171 6.00004L0.292816 8.87894C-0.0976492 9.2694 -0.0976502 9.90247 0.292815 10.2929Z" fill="currentColor"></path>
+</svg></div></span></span></a></div></div></div></div></div><div><a aria-label="homepage" href="/" aria-current="page" class="footer_logo-link w-inline-block w--current"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1341 213" fill="none" class="footer_logo"><path d="M1311.62 160.822C1301.25 160.822 1293.31 158.148 1288.05 152.886C1284.09 149.039 1281.76 144.171 1281.12 138.409H1290.65C1291.51 143.159 1294.24 146.832 1298.77 149.353L1298.93 149.442C1301 150.387 1303.18 151.115 1305.51 151.649C1307.63 152.039 1309.62 152.225 1311.64 152.225C1318.97 152.225 1331.29 150.411 1331.29 138.26C1331.29 126.109 1315.03 124.795 1309.68 124.304C1292.53 122.695 1284.19 116.098 1284.19 104.154C1284.19 98.5142 1286.04 93.8074 1289.69 90.1675C1294.17 85.5491 1301.01 83.2109 1310.01 83.2109C1319.02 83.2109 1326.27 85.6345 1331.12 90.6217C1334.68 94.1854 1336.71 98.5782 1337.29 104.001H1327.77C1326.79 98.2307 1322.83 91.8167 1310.01 91.8167C1295.73 91.8167 1293.6 99.5537 1293.6 104.163C1293.6 111.357 1299.3 115.509 1310.52 116.5C1321.53 117.598 1329.11 119.738 1333.68 123.021C1338.41 126.401 1340.7 131.389 1340.7 138.281C1340.7 144.357 1338.65 149.289 1334.43 153.368C1329.46 158.346 1321.8 160.855 1311.63 160.855L1311.62 160.822H1311.62Z" fill="currentColor" data-svg-origin="1281.1199951171875 83.21089935302734" transform="matrix(0,0,0,0,1281.12,83.2109)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M283.236 53.3752C293.742 53.3752 302.264 56.57 308.958 63.112C315.499 69.654 318.846 77.8818 318.846 87.9234C318.846 97.965 315.499 106.345 308.958 112.887C302.264 119.429 293.733 122.624 283.236 122.624H259.491V159.925H244.266V53.3691H283.236V53.3752ZM283.236 108.186C289.167 108.186 294.047 106.208 297.851 102.404C301.655 98.5991 303.633 93.8831 303.633 87.9386C303.633 81.9941 301.655 77.4276 297.851 73.6261C294.047 69.8217 289.179 67.8432 283.236 67.8432H259.491V108.186H283.236Z" fill="currentColor" data-svg-origin="244.26600646972656 53.36909866333008" transform="matrix(0,0,0,0,244.26601,53.3691)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M353.102 64.0362L340.919 76.2209L328.74 64.0362L340.919 51.8516L353.102 64.0362ZM333.315 83.8299H348.54V159.953H333.315V83.8299Z" fill="currentColor" data-svg-origin="328.739990234375 51.851600646972656" transform="matrix(0,0,0,0,328.73999,51.8516)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M362.997 54.2445L378.221 51.8545V159.941H362.997V54.2445ZM429.968 83.8297L399.518 121.893L429.968 159.956H412.46L382.01 121.893L412.46 83.8297H429.968Z" fill="currentColor" data-svg-origin="362.99700927734375 51.85449981689453" transform="matrix(0,0,0,0,362.99701,51.8545)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M446.101 128.737C447.473 134.063 450.362 138.474 454.62 141.681C459.034 145.028 464.063 146.702 469.998 146.702C478.974 146.702 485.829 143.202 490.547 136.343H507.446C504.556 143.952 499.841 150.049 493.288 154.612C486.591 159.176 478.822 161.459 470.001 161.459C458.427 161.459 448.841 157.655 441.236 150.189C433.781 142.733 429.968 133.289 429.968 121.875C429.968 110.462 433.772 101.018 441.236 93.5641C448.841 86.1076 458.439 82.2939 470.001 82.2939C481.562 82.2939 491.157 86.0984 498.613 93.5641C506.22 101.021 510.034 110.465 510.034 121.875C510.034 123.701 509.881 125.984 509.427 128.722H446.104V128.734L446.101 128.737ZM493.894 115.034C492.526 109.709 489.636 105.298 485.375 102.091C480.964 98.7434 475.944 97.0698 469.998 97.0698C464.051 97.0698 459.034 98.7434 454.62 102.091C450.362 105.285 447.47 109.7 446.101 115.034H493.894Z" fill="currentColor" data-svg-origin="429.9679870605469 82.29389953613281" transform="matrix(0,0,0,0,429.96799,82.2939)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M559.97 159.865V54.9277H597.427C607.61 54.9277 615.66 57.9488 622.028 64.1768C628.322 70.4688 631.385 78.1875 631.385 87.7718C631.385 97.3562 628.322 105.236 622.006 111.553C615.66 117.759 607.62 120.781 597.436 120.781H569.181V159.865H559.967H559.97ZM569.181 112.37H597.436C604.501 112.37 610.454 110.001 615.139 105.316C619.812 100.642 622.192 94.7406 622.192 87.7749C622.192 80.8091 619.824 75.0689 615.139 70.3956C610.466 65.7223 604.511 63.3415 597.436 63.3415H569.181V112.37Z" fill="currentColor" data-svg-origin="559.9669799804688 54.92770004272461" transform="matrix(0,0,0,0,559.96698,54.9277)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M641.413 159.864V85.8937H650.767V98.0235C654.19 90.8291 666.34 85.3937 676.609 84.4365V93.7496C659.698 94.8592 650.767 104.358 650.767 121.268V159.874H641.413V159.864Z" fill="currentColor" data-svg-origin="641.4130249023438 84.4365005493164" transform="matrix(0,0,0,0,641.41302,84.4365)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M717.416 161.473C706.135 161.473 696.726 157.788 689.456 150.517C682.077 143.277 678.34 133.985 678.34 122.877C678.34 111.768 682.068 102.476 689.435 95.2607C696.726 87.9688 706.138 84.2832 717.416 84.2832C728.693 84.2832 738.106 87.9688 745.378 95.2394C752.758 102.476 756.494 111.771 756.494 122.877C756.494 133.982 752.758 143.277 745.4 150.493C738.109 157.785 728.696 161.482 717.416 161.482V161.47V161.473ZM717.416 93.142C708.875 93.142 701.703 95.9801 696.116 101.565C690.529 107.153 687.694 114.326 687.694 122.868C687.694 131.409 690.532 138.582 696.116 144.17C701.712 149.758 708.875 152.593 717.416 152.593C725.956 152.593 733.128 149.758 738.715 144.17C744.312 138.573 747.137 131.409 747.137 122.868C747.137 114.326 744.299 107.153 738.715 101.565C733.128 95.9771 725.956 93.142 717.416 93.142Z" fill="currentColor" data-svg-origin="678.3400268554688 84.283203125" transform="matrix(0,0,0,0,678.34003,84.2832)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M803.392 161.473C792.882 161.473 784.037 157.8 777.093 150.563C770.007 143.183 766.41 133.857 766.41 122.871C766.41 111.884 770.007 102.559 777.093 95.1786C784.037 87.9416 792.882 84.2651 803.392 84.2651C813.902 84.2651 822.896 87.9263 829.992 95.4712L835.872 101.708V56.3748L845.229 54.375V159.842H835.872V144.006L829.992 150.243C822.896 157.785 814.191 161.449 803.392 161.449V161.47V161.473ZM805.812 92.8282C796.933 92.8282 789.859 95.5901 784.186 101.251C778.514 106.924 775.765 114 775.765 122.88C775.765 131.76 778.526 138.836 784.186 144.509C789.859 150.182 796.933 152.932 805.812 152.932C814.691 152.932 821.765 150.17 827.438 144.509C833.11 138.836 835.86 131.76 835.86 122.88C835.86 114 833.098 106.924 827.438 101.251C821.765 95.5779 814.691 92.8282 805.812 92.8282Z" fill="currentColor" data-svg-origin="766.4099731445312 54.375" transform="matrix(0,0,0,0,766.40997,54.375)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M889.352 161.474C879.867 161.474 872.433 158.441 866.638 152.216C860.923 146.052 858.022 138.087 858.022 128.524V85.8848H867.379V126.914C867.379 134.706 869.781 141.065 874.509 145.793C879.248 150.53 885.594 152.923 893.385 152.923C901.176 152.923 907.534 150.521 912.261 145.793C916.998 141.056 919.391 134.706 919.391 126.914V85.8848H928.748V159.856H919.391V144.022L912.642 151.39C905.729 158.801 896.82 161.474 889.343 161.474H889.355H889.352Z" fill="currentColor" data-svg-origin="858.02197265625 85.88480377197266" transform="matrix(0,0,0,0,858.02197,85.8848)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M980.662 161.473C969.381 161.473 959.972 157.788 952.702 150.517C945.323 143.277 941.586 133.985 941.586 122.877C941.586 111.768 945.311 102.476 952.681 95.2607C959.972 87.9688 969.384 84.2832 980.662 84.2832C990.952 84.2832 999.475 87.2951 1006.72 93.4895C1012.79 98.7817 1016.62 105.183 1018.43 113.03H1008.81C1007.12 107.519 1004.03 103.053 999.423 99.3914C994.14 95.1967 988.002 93.1634 980.677 93.1634C972.134 93.1634 964.965 96.0015 959.378 101.586C953.781 107.174 950.956 114.347 950.956 122.889C950.956 131.431 953.791 138.604 959.378 144.191C964.965 149.779 972.137 152.614 980.677 152.614C988.014 152.614 994.14 150.581 999.423 146.386C1004.04 142.722 1007.12 138.256 1008.82 132.745H1018.44C1016.63 140.591 1012.79 147.005 1006.71 152.31C999.487 158.483 990.967 161.482 980.686 161.482L980.665 161.47L980.662 161.473Z" fill="currentColor" data-svg-origin="941.5859985351562 84.283203125" transform="matrix(0,0,0,0,941.586,84.2832)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M1043.69 159.865V94.4358H1025.92V85.894H1043.69V67.2558L1053.04 64.4512V85.894H1072.42V94.4358H1053.04V159.865H1043.69Z" fill="currentColor" data-svg-origin="1025.9200439453125 64.45120239257812" transform="matrix(0,0,0,0,1025.92004,64.4512)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M1083.35 159.865V85.8939H1092.71V159.865H1083.35ZM1079.92 61.494L1088.04 53.376L1096.15 61.494L1088.04 69.6121L1079.92 61.494Z" fill="currentColor" data-svg-origin="1079.9200439453125 53.375999450683594" transform="matrix(0,0,0,0,1079.92004,53.376)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M1147.25 161.473C1135.97 161.473 1126.56 157.788 1119.29 150.517C1111.91 143.277 1108.17 133.985 1108.17 122.877C1108.17 111.768 1111.9 102.476 1119.27 95.2607C1126.56 87.9688 1135.97 84.2832 1147.25 84.2832C1158.53 84.2832 1167.94 87.9688 1175.21 95.2394C1182.59 102.476 1186.33 111.771 1186.33 122.877C1186.33 133.982 1182.59 143.277 1175.23 150.493C1167.94 157.785 1158.53 161.482 1147.25 161.482V161.47V161.473ZM1147.25 93.142C1138.71 93.142 1131.54 95.9801 1125.95 101.565C1120.36 107.153 1117.53 114.326 1117.53 122.868C1117.53 131.409 1120.37 138.582 1125.95 144.17C1131.55 149.758 1138.71 152.593 1147.25 152.593C1155.79 152.593 1162.96 149.758 1168.55 144.17C1174.15 138.573 1176.97 131.409 1176.97 122.868C1176.97 114.326 1174.13 107.153 1168.55 101.565C1162.96 95.9771 1155.79 93.142 1147.25 93.142Z" fill="currentColor" data-svg-origin="1108.1700439453125 84.283203125" transform="matrix(0,0,0,0,1108.17004,84.2832)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M1259.73 159.864V118.835C1259.73 111.043 1257.33 104.684 1252.6 99.9558C1247.87 95.2185 1241.52 92.8255 1233.73 92.8255C1225.94 92.8255 1219.58 95.2276 1214.85 99.9558C1210.12 104.693 1207.72 111.043 1207.72 118.835V159.864H1198.37V85.8933H1207.72L1207.78 101.511L1213.79 94.3253C1219.74 87.2071 1227.78 84.2715 1237.77 84.2715C1247.76 84.2715 1254.69 87.3047 1260.48 93.5205C1266.2 99.6814 1269.1 107.65 1269.1 117.213V159.849H1259.74L1259.73 159.861L1259.73 159.864Z" fill="currentColor" data-svg-origin="1198.3699951171875 84.27149963378906" transform="matrix(0,0,0,0,1198.37,84.2715)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path><path d="M185.324 106.132L151.798 86.1768L125.207 101.459C121.742 103.446 117.416 100.937 117.438 96.9379L117.569 67.6239L0.423672 0L0.185926 40.3433L25.637 54.9942C29.3648 57.1464 29.0051 62.6336 25.0274 64.2859L0.304803 74.5012L0 212.889L36.36 192.086L36.3813 162.958C36.3813 158.937 40.7614 156.45 44.2178 158.501L68.6143 172.979L185.314 106.126H185.327L185.324 106.132ZM44.2483 65.7095L107.961 102.379C111.427 104.379 111.427 109.379 107.961 111.366L44.1721 148.024C40.7156 150.015 36.4027 147.515 36.4027 143.524L36.4667 70.1938C36.4667 66.2064 40.7796 63.7158 44.2361 65.7064H44.2483V65.7095Z" fill="currentColor" data-svg-origin="0 0" transform="matrix(0,0,0,0,0,0)" style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></path></svg></a><div class="footer-content-foot"><div class="legal-links ts-small"><p>©2026 Pike Productions. All rights reserved.</p><a href="#" class="w-inline-block"><p>Privacybeleid</p></a><a href="#" class="w-inline-block"><p>Cookiebeleid</p></a><a href="#" class="w-inline-block"><p>Algemene voorwaarden</p></a><p>BE0800.032.739</p></div></div></div></div></div></div><img src="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69a4a12a43e74bf4b805f1d5_footer-bg.avif" loading="lazy" sizes="(max-width: 2880px) 100vw, 2880px" srcset="https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69a4a12a43e74bf4b805f1d5_footer-bg-p-500.avif 500w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69a4a12a43e74bf4b805f1d5_footer-bg-p-800.avif 800w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69a4a12a43e74bf4b805f1d5_footer-bg-p-1080.avif 1080w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69a4a12a43e74bf4b805f1d5_footer-bg-p-1600.png 1600w, https://cdn.prod.website-files.com/698a5653df8e539c6652c89c/69a4a12a43e74bf4b805f1d5_footer-bg.avif 2880w" alt="" class="footer_bg" style="translate: none; rotate: none; scale: none; opacity: 0; transform: translate3d(0px, 8rem, 0px) scale(1.5, 1.5);"></footer></div><div class="u-embed-css w-embed"><!-- CSS Starter -->
+<style>
+.wf-design-mode {
+ .home-load_component {
+    display: none;
+  }
+}
+</style></div></div>
