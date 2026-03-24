@@ -234,35 +234,34 @@ const initNewLoader = () => {
       tl.resume();
     };
 
-    // Already loaded
-    if (video.readyState >= 4) {
+    // Already loaded and playing
+    if (video.readyState >= 4 && !video.paused) {
       resume();
       return;
     }
 
-    // Force autoplay-friendly attributes (required for iOS low power mode)
+    // Ensure autoplay-friendly attributes
     video.muted = true;
     video.playsInline = true;
     video.setAttribute("playsinline", "");
     video.setAttribute("muted", "");
 
-    // If src is lazy-loaded via data attribute, set it now
-    const lazySrc = video.getAttribute("data-video-src") || video.getAttribute("data-src");
-    if (lazySrc && !video.src) {
-      video.src = lazySrc;
-    }
+    // Try to play - same pattern as initVideoPlayback
+    video.play()
+      .then(() => {
+        // Autoplay works, wait for enough data then resume
+        if (video.readyState >= 4) {
+          resume();
+        } else {
+          video.addEventListener("canplaythrough", resume, { once: true });
+        }
+      })
+      .catch(() => {
+        // Autoplay blocked (low power mode) - skip to end state
+        resume();
+      });
 
-    // Listen for load
-    video.addEventListener("canplaythrough", resume, { once: true });
-
-    // Force play attempt
-    video.load();
-    const playAttempt = video.play();
-    if (playAttempt) {
-      playAttempt.catch(() => {});
-    }
-
-    // Fallback: never wait longer than 5s
+    // Absolute fallback
     setTimeout(resume, 5000);
   });
 };
