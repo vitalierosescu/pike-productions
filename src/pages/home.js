@@ -1,148 +1,5 @@
 console.log('home')
 
-// const initHomeLoader = () => {
-//   const loaderShown = localStorage.getItem('loaderShown')
-
-//   CustomEase.create('vitalie-ease', '0.65, 0.01, 0.05, 0.99')
-
-//   let logoToFlip = document.querySelector('.nav_logo.to-flip')
-//   let videoToFlip = document.querySelector('.home-load_video-parent')
-//   let videoDestination = document.querySelector('.scaling-element__small-box')
-//   let menuIconToFlip = document.querySelector('.home-load_icon-wrap')
-//   let wrapperElements = document.querySelectorAll("[data-flip-element='wrapper']")
-//   let targetEl = document.querySelector("[data-flip-element='target']")
-
-//   //lenis.stop()
-
-//   gsap.defaults({ ease: 'vitalie-ease', duration: 1 })
-
-//   // --- Flip on scroll logic ---
-//   let flipTl
-
-//   function flipTimeline() {
-//     if (flipTl) {
-//       flipTl.kill()
-//       gsap.set(targetEl, { clearProps: 'all' })
-//     }
-
-//     flipTl = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: wrapperElements[0],
-//         start: 'center center',
-//         endTrigger: wrapperElements[wrapperElements.length - 1],
-//         end: 'center center',
-//         scrub: 0.25,
-//       },
-//     })
-
-//     wrapperElements.forEach(function (element, index) {
-//       let nextIndex = index + 1
-//       if (nextIndex < wrapperElements.length) {
-//         let nextWrapperEl = wrapperElements[nextIndex]
-//         let nextRect = nextWrapperEl.getBoundingClientRect()
-//         let thisRect = element.getBoundingClientRect()
-//         let nextDistance = nextRect.top + window.pageYOffset + nextWrapperEl.offsetHeight / 2
-//         let thisDistance = thisRect.top + window.pageYOffset + element.offsetHeight / 2
-//         let offset = nextDistance - thisDistance
-//         flipTl.add(
-//           Flip.fit(targetEl, nextWrapperEl, {
-//             duration: offset,
-//             ease: 'none',
-//           })
-//         )
-//       }
-//     })
-//   }
-
-//   let resizeTimer
-//   window.addEventListener('resize', function () {
-//     clearTimeout(resizeTimer)
-//     resizeTimer = setTimeout(function () {
-//       flipTimeline()
-//     }, 100)
-//   })
-
-//   // --- On loader complete ---
-//   function onLoaderComplete() {
-//     //lenis.start()
-//     localStorage.setItem('loaderShown', 'true')
-//     flipTimeline()
-//   }
-
-
-//   const defaultTl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: wrapperElements[0],
-//       start: 'center center',
-//       endTrigger: wrapperElements[wrapperElements.length - 1],
-//       end: 'center center',
-//       scrub: true
-//     },
-//   })
-
-//   defaultTl.to('.home--hero_content', { y: '-4rem', opacity: "0" })
-//     .to('[data-flip-element="target"]', { borderRadius: '200px' }, 0)
-
-//   // --- Skip loader if already shown ---
-//   if (loaderShown) {
-//     gsap.set('.nav_logo_svg-wrap', { yPercent: 0 })
-//     gsap.set('.scaling-element__bg', { opacity: 1 })
-//     gsap.set('.nav_logo.is--left', { x: '-1rem' })
-//     gsap.set('.nav_logo.is--right', { x: '1rem' })
-//     gsap.set('.nav_logo-svg.is--left', { yPercent: 110 })
-//     gsap.set('.nav_logo-svg.is--right', { yPercent: -110 })
-//     gsap.set('.hero_bg', { display: 'none' })
-//     videoDestination.appendChild(videoToFlip)
-
-//     onLoaderComplete()
-//     return
-//   }
-
-
-//   // --- Full loader animation ---
-//   const tl = gsap.timeline()
-
-//   tl.from(logoToFlip, { y: '100%' })
-//   tl.from(menuIconToFlip, { y: '100%', rotate: '360deg' }, '<')
-
-//   gsap.set('.nav_logo_svg-wrap', { yPercent: -100 })
-//   gsap.set('.scaling-element__bg', { opacity: 0 })
-
-//   tl.from(
-//     '.home-load_video-wrap',
-//     {
-//       delay: 0.6,
-//       width: '0rem',
-//       onComplete: () => {
-//         moveVideoInto(videoDestination)
-//         gsap.to('.nav_logo-svg.is--left', { yPercent: 110, duration: 0.9, ease: 'vitalie-ease' })
-//         gsap.to('.nav_logo-svg.is--right', { yPercent: -110, duration: 0.9, delay: 0.1, ease: 'vitalie-ease' })
-//         gsap.to('.nav_logo_svg-wrap', { yPercent: 0, duration: 0.6, delay: 1.2, ease: 'vitalie-ease' })
-//         gsap.to('.scaling-element__bg', { opacity: 1, duration: 1.5, delay: 1.2, ease: 'vitalie-ease' })
-//       },
-//     },
-//     0
-//   )
-//     .to('.nav_logo.is--left', { delay: 0.6, x: '-1rem' }, 0)
-//     .to('.nav_logo.is--right', { delay: 0.6, x: '1rem' }, 0)
-//     .from('.menu-button-text', {
-//       y: '100%',
-//       delay: 1.2,
-//       onComplete: onLoaderComplete,
-//     })
-//     .set('.hero_bg', { display: 'none' })
-
-//   function moveVideoInto(element) {
-//     let state = Flip.getState(videoToFlip)
-//     element.appendChild(videoToFlip)
-//     Flip.from(state, {
-//       duration: 1.5,
-//       delay: 0.3,
-//       absoluteOnLeave: true,
-//     })
-//   }
-// }
-
 const initNewLoader = () => {
   const logoWrap = document.querySelector(".loader__logo-wrap");
   const videoWrap = document.querySelector(".l-video-wrap");
@@ -151,6 +8,21 @@ const initNewLoader = () => {
   const wrapperElements = document.querySelectorAll("[data-flip-element='wrapper']");
 
   if (!logoWrap || !video) return;
+
+  // Split and hide hero text immediately (before loader plays)
+  const heroSplitTargets = [];
+  document.fonts.ready.then(() => {
+    document.querySelectorAll('.home--hero_content [data-split]').forEach(el => {
+      const split = SplitText.create(el, {
+        type: 'lines',
+        mask: 'lines',
+        autoSplit: true,
+        linesClass: 'line',
+      });
+      gsap.set(split.lines, { yPercent: 110 });
+      heroSplitTargets.push(...split.lines);
+    });
+  });
 
   // Start loading video immediately
   const src = video.getAttribute("data-video-src");
@@ -256,12 +128,23 @@ const initNewLoader = () => {
       position: "absolute",
       top: 0,
       left: 0,
-      zIndex: 5,
+      zIndex: 0,
       overflow: "hidden",
     });
 
     // Snap to first wrapper and set up scroll animation
     initScrollFlip();
+
+    // Reveal hero text after video snaps into place
+    if (heroSplitTargets.length) {
+      gsap.to(heroSplitTargets, {
+        yPercent: 0,
+        stagger: 0.08,
+        duration: 0.8,
+        delay: 0.3,
+        ease: 'expo.out',
+      });
+    }
 
     // Recalculate on resize
     let resizeTimer;
@@ -302,19 +185,17 @@ const initNewLoader = () => {
   let videoReady = false;
   let cycles = 0;
 
-  // Try to play video
-  video.play()
-    .then(() => {
-      if (video.readyState >= 4) {
-        videoReady = true;
-      } else {
-        video.addEventListener("canplaythrough", () => { videoReady = true; }, { once: true });
-      }
-    })
-    .catch(() => {
-      // Autoplay blocked - proceed anyway
-      videoReady = true;
-    });
+  // Track when video is actually loaded
+  const onVideoReady = () => { videoReady = true; };
+
+  if (video.readyState >= 4) {
+    onVideoReady();
+  } else {
+    video.addEventListener("canplaythrough", onVideoReady, { once: true });
+  }
+
+  // Try to play video (don't gate readiness on play success)
+  video.play().catch(() => {});
 
   // Absolute fallback
   setTimeout(() => { videoReady = true; }, 5000);
@@ -420,5 +301,5 @@ const initSlider = () => {
 export function initHome() {
     //initHomeLoader()
   initNewLoader()
-  initSlider()
+  //initSlider()
 }
