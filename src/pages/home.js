@@ -280,7 +280,7 @@ const initNewLoader = () => {
     tl.to(
       logoWrapOuter,
       {
-        scale: 65,
+        scale: 80,
         //x: "35vw",
         //opacity: 0,
         duration: outDuration,
