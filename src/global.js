@@ -2,10 +2,23 @@ console.log('Hello, global!')
 
 gsap.registerPlugin(SplitText, ScrollTrigger)
 
+// Lenis smooth scroll
 let _lenis = null
-window.addEventListener('GSAPReady', (e) => {
-  _lenis = e.detail?.lenis
-})
+
+export function initLenis() {
+  _lenis = new Lenis({ duration: 0.2 })
+  _lenis.on('scroll', ScrollTrigger.update)
+  gsap.ticker.add((time) => _lenis.raf(time * 1000))
+  gsap.ticker.lagSmoothing(0)
+}
+
+export function stopLenis() {
+  if (_lenis) _lenis.stop()
+}
+
+export function startLenis() {
+  if (_lenis) _lenis.start()
+}
 
 function refreshScroll() {
   ScrollTrigger.refresh()

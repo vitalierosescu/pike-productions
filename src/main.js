@@ -3,7 +3,7 @@ import { initAbout } from './pages/about.js'
 import { initCaseDetail } from './pages/caseDetail.js'
 import { initCaseOverview } from './pages/caseOverview.js'
 import { initContact } from './pages/contact.js'
-import { initGlobal } from './global.js'  
+import { initGlobal, initLenis } from './global.js'
 import {initNav} from './nav.js'
 
 ;(() => {
@@ -32,6 +32,8 @@ import {initNav} from './nav.js'
   function init() {
     const page = document.querySelector(CONFIG.selectors.pageWrapper)
     if (!page) return
+
+    initLenis()
 
     if (page.classList.contains('is-home')) initHome()
     if (page.classList.contains('is-about')) initAbout()
