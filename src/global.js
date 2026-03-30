@@ -777,54 +777,60 @@ function initHighlightText() {
 const initLogos = () => {
   const items = gsap.utils.toArray('[data-logo-wall-item]')
   if (!items.length) return
-  const firstImgs = items.map((el) => el.querySelectorAll('.logo-cycle_img')[0])
-  const secondImgs = items.map((el) => el.querySelectorAll('.logo-cycle_img')[1])
 
-  gsap.set(firstImgs, { opacity: 0, yPercent: -80 })
-  gsap.set(secondImgs, { opacity: 0, yPercent: -80 })
+  const rand = gsap.utils.random
 
-  function cycle() {
-    const tl = gsap.timeline({ onComplete: cycle })
+  items.forEach((item) => {
+    const imgs = item.querySelectorAll('.logo-cycle_img')
+    if (imgs.length < 2) return
 
-    tl.to(firstImgs, { opacity: 0, yPercent: 80, stagger: 0.12, duration: 0.8, ease: 'power3.in' })
-      .to(
-        secondImgs,
-        { opacity: 1, yPercent: 0, stagger: 0.12, duration: 0.8, ease: 'power3.out' },
-        '<+=0.6'
-      )
-      .set(firstImgs, { opacity: 0, yPercent: -80 })
+    const first = imgs[0]
+    const second = imgs[1]
+    let showingFirst = true
 
-      .to({}, { duration: 0.8 })
+    gsap.set(item, { perspective: 600 })
+    gsap.set(first, { opacity: 0, rotateX: -90 })
+    gsap.set(second, { opacity: 0, rotateX: -90 })
 
-      .to(secondImgs, { opacity: 0, yPercent: 80, stagger: 0.12, duration: 0.8, ease: 'power3.in' })
-      .to(
-        firstImgs,
-        { opacity: 1, yPercent: 0, stagger: 0.12, duration: 0.8, ease: 'power3.out' },
-        '<+=0.6'
-      )
-      .set(secondImgs, { opacity: 0, yPercent: -80 })
+    function flip() {
+      const current = showingFirst ? first : second
+      const next = showingFirst ? second : first
+      const delay = rand(2, 6)
 
-      .to({}, { duration: 0.8 })
-  }
+      gsap.delayedCall(delay, () => {
+        const tl = gsap.timeline({ onComplete: flip })
+        tl.to(current, {
+          rotateX: 90,
+          opacity: 0,
+          duration: 0.6,
+          ease: 'power2.in',
+        }).fromTo(
+          next,
+          { rotateX: -90, opacity: 0 },
+          { rotateX: 0, opacity: 1, duration: 0.6, ease: 'power2.out' }
+        )
+        showingFirst = !showingFirst
+      })
+    }
 
-  function enter() {
-    gsap.to(firstImgs, {
-      opacity: 1,
-      yPercent: 0,
-      stagger: 0.12,
-      duration: 0.8,
-      ease: 'power3.out',
-      onComplete: () => {
-        gsap.delayedCall(0.8, cycle)
-      },
+    function enter() {
+      const entryDelay = rand(0, 1.2)
+      gsap.to(first, {
+        opacity: 1,
+        rotateX: 0,
+        duration: 0.6,
+        delay: entryDelay,
+        ease: 'power2.out',
+        onComplete: flip,
+      })
+    }
+
+    ScrollTrigger.create({
+      trigger: '.logo-cycle_list-wrap',
+      start: 'top bottom',
+      once: true,
+      onEnter: enter,
     })
-  }
-
-  ScrollTrigger.create({
-    trigger: '.logo-cycle_list-wrap',
-    start: 'top bottom',
-    once: true,
-    onEnter: enter,
   })
 }
 

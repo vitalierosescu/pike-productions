@@ -21,7 +21,7 @@ const initNewLoader = () => {
   // Split and hide hero text immediately (before loader plays)
   const heroSplitTargets = []
   document.fonts.ready.then(() => {
-    document.querySelectorAll('.home--hero_content [data-split]').forEach((el) => {
+    heroContent.querySelectorAll('[data-split]').forEach((el) => {
       const split = SplitText.create(el, {
         type: 'lines',
         mask: 'lines',
@@ -48,7 +48,7 @@ const initNewLoader = () => {
   const fadeInVideo = () => {
     if (videoFadedIn) return
     videoFadedIn = true
-    gsap.to(video, { opacity: 1, duration: 0.6, delay: 0.8, ease: 'power2.out' })
+    gsap.to(video, { opacity: 1, duration: 1, delay: 0.2, ease: 'power2.out' })
   }
 
   if (video.readyState >= 4) {
@@ -121,6 +121,7 @@ const initNewLoader = () => {
         heroContent,
         {
           opacity: 0,
+          duration: 0.2,
           ease: 'none',
         },
         0
@@ -159,8 +160,12 @@ const initNewLoader = () => {
 
     // Reveal hero text after video snaps into place
     gsap.to(heroContent, {
-      opacity: 1,
+      autoAlpha: 1,
       duration: 0.4,
+      onComplete: () => {
+        // Re-enable scroll after loader completes
+        startLenis()
+      },
     })
     if (heroSplitTargets.length) {
       gsap.to(heroSplitTargets, {
@@ -177,9 +182,6 @@ const initNewLoader = () => {
       opacity: 1,
       duration: 1.8,
     })
-
-    // Re-enable scroll after loader completes
-    startLenis()
 
     // Recalculate on resize
     let resizeTimer
@@ -280,7 +282,7 @@ const initNewLoader = () => {
     tl.to(
       logoWrapOuter,
       {
-        scale: 80,
+        scale: 100,
         //x: "35vw",
         //opacity: 0,
         duration: outDuration,

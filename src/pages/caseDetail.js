@@ -740,7 +740,7 @@ function initBunnyPlayers() {
   var swiperInstances = []
 
   function createSwipers() {
-    document.querySelectorAll('.visuals_group-list').forEach(function (container) {
+    document.querySelectorAll('.visuals_group-list .swiper').forEach(function (container) {
       var wrapper = container.querySelector('.swiper-wrapper')
       if (wrapper) {
         Array.from(wrapper.children).forEach(function (child) {
