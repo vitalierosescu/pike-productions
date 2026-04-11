@@ -303,15 +303,6 @@ const initHeroParallax = () => {
         0
       )
 
-      tl.to(
-        '.home--hero_content',
-        {
-          y: '-25vh',
-          ease: 'none',
-        },
-        0
-      )
-
       gsap.set(hero, { filter: 'brightness(100%)' })
     }
 
@@ -975,6 +966,64 @@ const initProjectsLoadMore = () => {
   })
 }
 
+function initPageTransition() {
+  document.querySelectorAll('.page-transition_component').forEach((component) => {
+    if (component.hasAttribute('data-page-transition')) return
+    component.setAttribute('data-page-transition', '')
+
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a')
+      if (!link) return
+      const currentUrl = link.href
+      if (
+        link.hostname !== window.location.host ||
+        currentUrl.includes('#') ||
+        link.target === '_blank'
+      )
+        return
+      e.preventDefault()
+      // Out animation: columns slide up to cover the page, then navigate
+      gsap.context(() => {
+        const tl = gsap.timeline({ onComplete: () => (window.location.href = currentUrl) })
+        tl.set('.page-transition_column', { yPercent: 100 })
+        tl.set(component, { display: 'flex' })
+        tl.set('.loader-1_wrap', { display: 'block' })
+        tl.to('.page-transition_column', {
+          yPercent: 0,
+          duration: 0.3,
+          ease: 'power1.inOut',
+          stagger: { each: 0.1, from: 'start' },
+        })
+        tl.fromTo(
+          '.loader-1_wrap',
+          { opacity: 0 },
+          { opacity: 1, duration: 0.3, ease: 'power1.inOut' },
+          0.3
+        )
+      }, component)
+    })
+
+    window.onpageshow = (e) => e.persisted && window.location.reload()
+
+    // In animation: columns slide off upward to reveal the new page
+    // Skipped on the very first visit (page-transition-first-visit class on <html>)
+    if (document.documentElement.classList.contains('page-transition-first-visit')) return
+    gsap.context(() => {
+      const tl = gsap.timeline()
+      tl.set(component, { display: 'flex' })
+      tl.to('.page-transition_column', {
+        yPercent: -100,
+        duration: 0.3,
+        ease: 'power1.inOut',
+        stagger: { each: 0.1, from: 'start' },
+      })
+      tl.to('.loader-1_wrap', { opacity: 0, duration: 0.3, ease: 'power1.inOut' }, 0)
+
+      tl.set(component, { display: 'none' })
+    }, component)
+  })
+}
+
 export function initGlobal() {
   initLogos()
   initGlobalParallax()
@@ -997,4 +1046,5 @@ export function initGlobal() {
 
   initFaqLoadMore()
   initProjectsLoadMore()
+  initPageTransition()
 }
