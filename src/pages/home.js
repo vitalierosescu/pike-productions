@@ -87,6 +87,7 @@ const initNewLoader = () => {
       y: startRect.y,
       width: startRect.width,
       height: startRect.height,
+      borderRadius: '0px',
     })
 
     flipTl = gsap.timeline({

@@ -1034,11 +1034,11 @@ export function initGlobal() {
 
   initLink()
 
-  initHighlightText()
   initPreviewFollower()
   initHeroParallax()
 
   document.fonts.ready.then(function () {
+    initHighlightText()
     initMaskTextScrollReveal()
   })
 

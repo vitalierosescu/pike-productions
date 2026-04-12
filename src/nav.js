@@ -1,47 +1,75 @@
-console.log("Nav!");
+console.log('Nav!')
 
 function initNavigation() {
-
   // Toggle Navigation
-  document.querySelectorAll('[data-navigation-toggle="toggle"]').forEach(toggleBtn => {
+  document.querySelectorAll('[data-navigation-toggle="toggle"]').forEach((toggleBtn) => {
     toggleBtn.addEventListener('click', () => {
-      const navStatusEl = document.querySelector('[data-navigation-status]');
-      if (!navStatusEl) return;
+      const navStatusEl = document.querySelector('[data-navigation-status]')
+      if (!navStatusEl) return
       if (navStatusEl.getAttribute('data-navigation-status') === 'not-active') {
-        navStatusEl.setAttribute('data-navigation-status', 'active');
-        // If you use Lenis you can 'stop' Lenis here: Example Lenis.stop();  
+        navStatusEl.setAttribute('data-navigation-status', 'active')
+        // If you use Lenis you can 'stop' Lenis here: Example Lenis.stop();
       } else {
-        navStatusEl.setAttribute('data-navigation-status', 'not-active');
+        navStatusEl.setAttribute('data-navigation-status', 'not-active')
         // If you use Lenis you can 'start' Lenis here: Example Lenis.start();
       }
-    });
-  });
+    })
+  })
 
   // Close Navigation
-  document.querySelectorAll('[data-navigation-toggle="close"]').forEach(closeBtn => {
+  document.querySelectorAll('[data-navigation-toggle="close"]').forEach((closeBtn) => {
     closeBtn.addEventListener('click', () => {
-      const navStatusEl = document.querySelector('[data-navigation-status]');
-      if (!navStatusEl) return;
-      navStatusEl.setAttribute('data-navigation-status', 'not-active');
+      const navStatusEl = document.querySelector('[data-navigation-status]')
+      if (!navStatusEl) return
+      navStatusEl.setAttribute('data-navigation-status', 'not-active')
       // If you use Lenis you can 'start' Lenis here: Example Lenis.start();
-
-    });
-  });
+    })
+  })
 
   // Key ESC - Close Navigation
-  document.addEventListener('keydown', e => {
+  document.addEventListener('keydown', (e) => {
     if (e.keyCode === 27) {
-      const navStatusEl = document.querySelector('[data-navigation-status]');
-      if (!navStatusEl) return;
+      const navStatusEl = document.querySelector('[data-navigation-status]')
+      if (!navStatusEl) return
       if (navStatusEl.getAttribute('data-navigation-status') === 'active') {
-        navStatusEl.setAttribute('data-navigation-status', 'not-active');
-       // If you use Lenis you can 'start' Lenis here: Example Lenis.start();
+        navStatusEl.setAttribute('data-navigation-status', 'not-active')
+        // If you use Lenis you can 'start' Lenis here: Example Lenis.start();
       }
     }
-  });
+  })
+}
+
+function initScrollBehavior() {
+  const nav = document.querySelector('.bold-nav-full__bar')
+  if (!nav) return
+
+  const offsetY = 600
+  const scrollThreshold = offsetY + 1000
+  let oldScroll = 0
+
+  function update() {
+    const scrollY = window.scrollY
+
+    // Add/remove is-active based on scroll position
+    nav.classList.toggle('is--scrolled', scrollY > offsetY)
+
+    // Add/remove is-scrolled for hide-on-scroll behavior
+    const shouldHide =
+      scrollY > scrollThreshold && scrollY > oldScroll && nav.classList.contains('is--scrolled')
+    nav.classList.toggle('is--scrolled-full', shouldHide)
+
+    oldScroll = scrollY
+  }
+
+  // Initial check
+  update()
+
+  // Listen for scroll
+  window.addEventListener('scroll', update, { passive: true })
 }
 
 // Initialize Bold Full Screen Navigation
 export function initNav() {
-  initNavigation();
+  initNavigation()
+  initScrollBehavior()
 }
