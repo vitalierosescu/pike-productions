@@ -118,8 +118,9 @@ const initNewLoader = () => {
         },
         0
       )
-      .to(
+      .fromTo(
         heroContent,
+        { opacity: 1 },
         {
           opacity: 0,
           duration: 0.2,
@@ -158,6 +159,7 @@ const initNewLoader = () => {
 
     // Snap to first wrapper and set up scroll animation
     initScrollFlip()
+    ScrollTrigger.refresh()
 
     // Reveal hero text after video snaps into place
     gsap.to(heroContent, {
@@ -188,7 +190,7 @@ const initNewLoader = () => {
     let resizeTimer
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimer)
-      resizeTimer = setTimeout(initScrollFlip, 100)
+      resizeTimer = setTimeout(initScrollFlip, 250)
     })
   }
 
@@ -288,6 +290,16 @@ const initNewLoader = () => {
         //opacity: 0,
         duration: outDuration,
         ease: 'power4.inOut',
+      },
+      0
+    )
+
+    tl.to(
+      '.loader__bg-bar',
+      {
+        scaleX: 1,
+        duration: outDuration,
+        ease: 'power3.inOut',
       },
       0
     )

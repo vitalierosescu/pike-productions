@@ -1038,8 +1038,11 @@ export function initGlobal() {
   initHeroParallax()
 
   document.fonts.ready.then(function () {
-    initHighlightText()
-    initMaskTextScrollReveal()
+    requestAnimationFrame(() => {
+      initHighlightText()
+      initMaskTextScrollReveal()
+      ScrollTrigger.refresh()
+    })
   })
 
   initMiniShowreelPlayer()
