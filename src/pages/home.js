@@ -460,7 +460,7 @@ const initNewLoader = () => {
   pulse.eventCallback('onRepeat', () => {
     cycles += 0.5
     const videoReadyAndMinCycle = Number.isInteger(cycles) && cycles >= 1 && videoReady
-    const forcedAfterTwoRounds = cycles >= 4
+    const forcedAfterTwoRounds = cycles >= 2
     if (videoReadyAndMinCycle || forcedAfterTwoRounds) {
       pulse.kill()
       startReveal()
