@@ -459,7 +459,9 @@ const initNewLoader = () => {
 
   pulse.eventCallback('onRepeat', () => {
     cycles += 0.5
-    if (Number.isInteger(cycles) && cycles >= 1 && videoReady) {
+    const videoReadyAndMinCycle = Number.isInteger(cycles) && cycles >= 1 && videoReady
+    const forcedAfterTwoRounds = cycles >= 4
+    if (videoReadyAndMinCycle || forcedAfterTwoRounds) {
       pulse.kill()
       startReveal()
     }
@@ -493,6 +495,7 @@ const initNewLoader = () => {
 }
 
 export function initHome() {
+
   //initOldLoader()
   initNewLoader()
 }
