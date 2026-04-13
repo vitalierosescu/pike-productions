@@ -19,6 +19,7 @@ const initNewLoader = () => {
   if (!logoWrap || !video) return
 
   // Split and hide hero text immediately (before loader plays)
+  let loaderCompleted = false
   const heroSplitTargets = []
   document.fonts.ready.then(() => {
     heroContent.querySelectorAll('[data-split]').forEach((el) => {
@@ -28,9 +29,23 @@ const initNewLoader = () => {
         autoSplit: true,
         linesClass: 'line',
       })
-      gsap.set(split.lines, { yPercent: 110 })
+      if (!loaderCompleted) {
+        gsap.set(split.lines, { yPercent: 110 })
+      }
       heroSplitTargets.push(...split.lines)
     })
+
+    // Race condition guard: if loader already finished before fonts were ready,
+    // reveal the text now (lines were never set to 110 so no animation needed,
+    // but if they were set to 110 before loaderCompleted was true, animate them in)
+    if (loaderCompleted && heroSplitTargets.length) {
+      gsap.to(heroSplitTargets, {
+        yPercent: 0,
+        stagger: 0.08,
+        duration: 0.8,
+        ease: 'expo.out',
+      })
+    }
   })
 
   // Start loading video immediately
@@ -131,6 +146,7 @@ const initNewLoader = () => {
   }
 
   function onLoaderComplete() {
+    loaderCompleted = true
     if (wrapperElements.length < 2 || !container) return
 
     const loaderBg = document.querySelector('.hero_bg')
