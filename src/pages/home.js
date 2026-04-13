@@ -292,21 +292,19 @@ const initNewLoader = () => {
   }
 
   // Reveal video only once it's actually playing frames (catches low-power mode).
-  // Falls back to [data-video-fallback] image after 4s if playing never fires.
+  // Fallback image always fades in after 1s. Video fades in on top when playing.
+  // If video never plays (low power mode / slow load), fallback stays visible.
   gsap.set(video, { opacity: 0 })
   const fallbackEl = document.querySelector('[data-video-fallback]')
   let videoStarted = false
 
-  const fallbackTimer = setTimeout(() => {
-    if (!videoStarted && fallbackEl) {
-      gsap.to(fallbackEl, { opacity: 1, duration: 0.3, ease: 'power2.out' })
-    }
-  }, 4000)
+  if (fallbackEl) {
+    gsap.to(fallbackEl, { opacity: 1, duration: 0.5, delay: 1, ease: 'power2.out' })
+  }
 
   const onVideoPlaying = () => {
     if (videoStarted) return
     videoStarted = true
-    clearTimeout(fallbackTimer)
     gsap.to(video, { opacity: 1, duration: 1, delay: 0.2, ease: 'power2.out' })
   }
 
