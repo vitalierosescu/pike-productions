@@ -967,6 +967,9 @@ const initProjectsLoadMore = () => {
 }
 
 function initPageTransition() {
+  const transitionDuration = 0.3
+  const transitionEase = 'power3.inOut'
+
   document.querySelectorAll('.page-transition_component').forEach((component) => {
     if (component.hasAttribute('data-page-transition')) return
     component.setAttribute('data-page-transition', '')
@@ -990,15 +993,15 @@ function initPageTransition() {
         tl.set('.loader-1_wrap', { display: 'block' })
         tl.to('.page-transition_column', {
           yPercent: 0,
-          duration: 0.3,
-          ease: 'power1.inOut',
+          duration: transitionDuration,
+          ease: transitionEase,
           stagger: { each: 0.1, from: 'start' },
         })
         tl.fromTo(
           '.loader-1_wrap',
           { opacity: 0 },
-          { opacity: 1, duration: 0.3, ease: 'power1.inOut' },
-          0.3
+          { opacity: 1, duration: transitionDuration, ease: transitionEase },
+          transitionDuration
         )
       }, component)
     })
@@ -1013,11 +1016,11 @@ function initPageTransition() {
       tl.set(component, { display: 'flex' })
       tl.to('.page-transition_column', {
         yPercent: -100,
-        duration: 0.3,
-        ease: 'power1.inOut',
+        duration: transitionDuration,
+        ease: transitionEase,
         stagger: { each: 0.1, from: 'start' },
       })
-      tl.to('.loader-1_wrap', { opacity: 0, duration: 0.3, ease: 'power1.inOut' }, 0)
+      tl.to('.loader-1_wrap', { opacity: 0, duration: transitionDuration, ease: transitionEase }, 0)
 
       tl.set(component, { display: 'none' })
     }, component)
