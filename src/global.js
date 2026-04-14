@@ -825,6 +825,69 @@ const initLogos = () => {
   })
 }
 
+const initLogosNew = () => {
+  const items = gsap.utils.toArray('[data-logo-wall-item]')
+  if (!items.length) return
+
+  const rand = gsap.utils.random
+  const travel = 24
+
+  items.forEach((item) => {
+    const imgs = item.querySelectorAll('.logo-cycle_img')
+    if (imgs.length < 2) return
+
+    const first = imgs[0]
+    const second = imgs[1]
+    let showingFirst = true
+
+    gsap.set(first, { opacity: 0, y: travel })
+    gsap.set(second, { opacity: 0, y: travel })
+
+    function flip() {
+      const current = showingFirst ? first : second
+      const next = showingFirst ? second : first
+      const delay = rand(2, 6)
+
+      gsap.delayedCall(delay, () => {
+        const tl = gsap.timeline({ onComplete: flip })
+        tl.to(current, {
+          y: -travel,
+          opacity: 0,
+          duration: 0.5,
+          ease: 'power3.in',
+        })
+          .set(next, { y: travel, opacity: 0 })
+          .to(next, {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            ease: 'power3.out',
+          })
+        showingFirst = !showingFirst
+      })
+    }
+
+    function enter() {
+      const entryDelay = rand(0, 1.2)
+      gsap.to(first, {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        delay: entryDelay,
+        ease: 'power3.out',
+        onComplete: flip,
+      })
+    }
+
+    ScrollTrigger.create({
+      trigger: '.logo-cycle_list-wrap',
+      start: 'top bottom',
+      once: true,
+      onEnter: enter,
+    })
+  })
+}
+
 function initCursor() {
   function initFollower() {
     let follower = document.querySelector('.cursor')
@@ -1028,7 +1091,8 @@ function initPageTransition() {
 }
 
 export function initGlobal() {
-  initLogos()
+  // initLogos()
+  initLogosNew()
   initGlobalParallax()
   initVideoPlayback()
   initFaq()
