@@ -810,21 +810,75 @@ function initBunnyPlayers() {
       destroySwipers()
     }
 
-    window.addEventListener('resize', debounce(function () {
-      var nowMobile = window.innerWidth < 768
-      if (nowMobile && !swiperInstances.length) {
-        createSwipers()
-      } else if (!nowMobile && swiperInstances.length) {
-        destroySwipers()
-      }
-    }, 250))
+    window.addEventListener(
+      'resize',
+      debounce(function () {
+        var nowMobile = window.innerWidth < 768
+        if (nowMobile && !swiperInstances.length) {
+          createSwipers()
+        } else if (!nowMobile && swiperInstances.length) {
+          destroySwipers()
+        }
+      }, 250)
+    )
   }
 
   initBunnyPlayer()
   initVisualsSwiper()
 }
 
+const hideCurrentCaseFromMore = () => {
+  const hero = document.querySelector('[data-cms-item="hero"]')
+  if (!hero) return
+
+  const heroValue = hero.textContent.trim()
+  if (!heroValue) return
+
+  document.querySelectorAll('[data-cms-item="more"]').forEach((item) => {
+    if (item.textContent.trim() !== heroValue) return
+    const slide = item.closest('.swiper-slide, .slider_item, .w-dyn-item') || item
+    slide.style.display = 'none'
+  })
+}
+
+const initMoreSlider = () => {
+  document.querySelectorAll('.slider_component').forEach((component) => {
+    if (component.hasAttribute('data-slider')) return
+    component.setAttribute('data-slider', '')
+
+    const sliderElement = component.querySelector('.slider_wrap')
+    if (!sliderElement) return
+
+    const swiper = new Swiper(sliderElement, {
+      slidesPerView: 'auto',
+      followFinger: true,
+      freeMode: false,
+      slideToClickedSlide: false,
+      centeredSlides: false,
+      autoHeight: false,
+      speed: 600,
+      mousewheel: { forceToAxis: true },
+      keyboard: { enabled: true, onlyInViewport: true },
+      navigation: {
+        nextEl: component.parentElement.querySelector('.slider_button.is-next'),
+        prevEl: component.parentElement.querySelector('.slider_button.is-prev'),
+      },
+      pagination: {
+        el: component.parentElement.querySelector('.slider_bullet_wrap'),
+        bulletActiveClass: 'is-active',
+        bulletClass: 'slider_bullet_item',
+        bulletElement: 'button',
+        clickable: true,
+      },
+      slideActiveClass: 'is-active',
+      slideDuplicateActiveClass: 'is-active',
+    })
+  })
+}
+
 export function initCaseDetail() {
   initDraggableMarquee()
   initBunnyPlayers()
+  hideCurrentCaseFromMore()
+  initMoreSlider()
 }
