@@ -4,13 +4,13 @@ import { initCaseDetail } from './pages/caseDetail.js'
 import { initCaseOverview } from './pages/caseOverview.js'
 import { initContact } from './pages/contact.js'
 import { initGlobal, initLenis } from './global.js'
-import {initNav} from './nav.js'
-
+import { initNav } from './nav.js'
+import { initServices } from './pages/services.js'
 ;(() => {
   // =============================================
   // GSAP SETUP
   // =============================================
-  gsap.registerPlugin(ScrollTrigger, Flip);
+  gsap.registerPlugin(ScrollTrigger, Flip)
 
   // =============================================
   // CONFIG
@@ -40,9 +40,10 @@ import {initNav} from './nav.js'
     if (page.classList.contains('is-case-detail')) initCaseDetail()
     if (page.classList.contains('is-case-overview')) initCaseOverview()
     if (page.classList.contains('is-contact')) initContact()
+    if (page.classList.contains('is-services')) initServices()
 
-      initNav()
-      initGlobal()
+    initNav()
+    initGlobal()
   }
 
   // =============================================

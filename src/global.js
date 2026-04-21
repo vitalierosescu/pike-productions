@@ -840,8 +840,8 @@ const initLogosNew = () => {
     const second = imgs[1]
     let showingFirst = true
 
-    gsap.set(first, { opacity: 0, y: travel })
-    gsap.set(second, { opacity: 0, y: travel })
+    gsap.set(first, { opacity: 0, y: -travel })
+    gsap.set(second, { opacity: 0, y: -travel })
 
     function flip() {
       const current = showingFirst ? first : second
@@ -851,12 +851,12 @@ const initLogosNew = () => {
       gsap.delayedCall(delay, () => {
         const tl = gsap.timeline({ onComplete: flip })
         tl.to(current, {
-          y: -travel,
+          y: travel,
           opacity: 0,
           duration: 0.5,
           ease: 'power3.in',
         })
-          .set(next, { y: travel, opacity: 0 })
+          .set(next, { y: -travel, opacity: 0 })
           .to(next, {
             y: 0,
             opacity: 1,
@@ -1053,19 +1053,19 @@ function initPageTransition() {
         const tl = gsap.timeline({ onComplete: () => (window.location.href = currentUrl) })
         tl.set('.page-transition_column', { yPercent: 100 })
         tl.set(component, { display: 'flex' })
-        tl.set('.loader-1_wrap', { display: 'block' })
+        // tl.set('.loader-1_wrap', { display: 'block' })
         tl.to('.page-transition_column', {
           yPercent: 0,
           duration: transitionDuration,
           ease: transitionEase,
           stagger: { each: 0.1, from: 'start' },
         })
-        tl.fromTo(
-          '.loader-1_wrap',
-          { opacity: 0 },
-          { opacity: 1, duration: transitionDuration, ease: transitionEase },
-          transitionDuration
-        )
+        // tl.fromTo(
+        //   '.loader-1_wrap',
+        //   { opacity: 0 },
+        //   { opacity: 1, duration: transitionDuration, ease: transitionEase },
+        //   transitionDuration
+        // )
       }, component)
     })
 
@@ -1083,7 +1083,7 @@ function initPageTransition() {
         ease: transitionEase,
         stagger: { each: 0.1, from: 'start' },
       })
-      tl.to('.loader-1_wrap', { opacity: 0, duration: transitionDuration, ease: transitionEase }, 0)
+      // tl.to('.loader-1_wrap', { opacity: 0, duration: transitionDuration, ease: transitionEase }, 0)
 
       tl.set(component, { display: 'none' })
     }, component)
